@@ -1,0 +1,1165 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6. 技术规格 &mdash; JAKA π用户手册 V01 文档</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=71b970ea" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=71b970ea" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=1229c742"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/translations.js?v=540d3cec"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="7. 操作指南" href="%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97.html" />
+    <link rel="prev" title="5. 部件概览" href="%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            JAKA π用户手册
+              <img src="_static/Logo1.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">目录</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E.html">1. 声明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E4%BA%A7%E5%93%81%E6%B8%85%E5%8D%95.html">2. 产品清单</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E6%89%8B%E5%86%8C%E6%A6%82%E8%BF%B0.html">3. 手册概述</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E5%AE%89%E5%85%A8%E8%A7%84%E8%8C%83.html">4. 安全规范</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0.html">5. 部件概览</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. 技术规格</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id3">6.1. 技术参数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">6.2. 指示灯</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">6.3. 按钮</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#d">6.4. 3D相机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id10">6.5. 激光雷达</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id12">6.6. 标定刻线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id14">6.7. 旋转方向和坐标系</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id16">6.8. 奇异点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id18">6.9. 电气接口</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id20">6.9.1. 用户接口</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id22">6.9.2. 充电接口</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id24">6.10. 无线手柄</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id26">6.10.1. 手柄按钮</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id27">6.10.2. 手柄指示灯</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id28">6.10.3. 手柄充电</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97.html">7. 操作指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E8%B4%A8%E9%87%8F%E4%BF%9D%E9%9A%9C.html">8. 质量保证</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">JAKA π用户手册</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">6. </span>技术规格</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<span id="id2"></span><h1><span class="section-number">6. </span>技术规格<a class="headerlink" href="#id1" title="链接到此标题。"></a></h1>
+<section id="id3">
+<span id="id4"></span><h2><span class="section-number">6.1. </span>技术参数<a class="headerlink" href="#id3" title="链接到此标题。"></a></h2>
+<table class="docutils align-default" id="id29">
+<caption><span class="caption-number">表 6.1 </span><span class="caption-text">技术参数</span><a class="headerlink" href="#id29" title="链接到此表格。"></a></caption>
+<colgroup>
+<col style="width: 17.6%" />
+<col style="width: 11.8%" />
+<col style="width: 23.5%" />
+<col style="width: 23.5%" />
+<col style="width: 23.5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>JAKA π</p></th>
+<th class="head"></th>
+<th class="head"><p>基础版</p></th>
+<th class="head"><p>探索版</p></th>
+<th class="head"><p>旗舰版</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>基本参数</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>站立尺寸（mm）</p></td>
+<td></td>
+<td><p>1220×420×220</p></td>
+<td><p>1220×420×220</p></td>
+<td><p>1220×420×220</p></td>
+</tr>
+<tr class="row-even"><td><p>身高（mm）</p></td>
+<td></td>
+<td><p>1220</p></td>
+<td><p>1220</p></td>
+<td><p>1220</p></td>
+</tr>
+<tr class="row-odd"><td><p>重量（kg）</p></td>
+<td></td>
+<td><p>40</p></td>
+<td><p>42</p></td>
+<td><p>43</p></td>
+</tr>
+<tr class="row-even"><td><p>单臂负载（kg）</p></td>
+<td></td>
+<td><p>3</p></td>
+<td><p>3</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>总自由度</p></td>
+<td></td>
+<td><p>25</p></td>
+<td><p>27</p></td>
+<td><p>27</p></td>
+</tr>
+<tr class="row-even"><td><p>颈部自由度</p></td>
+<td></td>
+<td><p>/</p></td>
+<td><p>2</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>单手臂自由度</p></td>
+<td></td>
+<td><p>6</p></td>
+<td><p>6</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>腰部自由度</p></td>
+<td></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>单腿自由度</p></td>
+<td></td>
+<td><p>6</p></td>
+<td><p>6</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>单臂展（含夹爪）（mm）</p></td>
+<td></td>
+<td><p>450</p></td>
+<td><p>450</p></td>
+<td><p>450</p></td>
+</tr>
+<tr class="row-odd"><td><p>平均功率（W）</p></td>
+<td></td>
+<td><p>200</p></td>
+<td><p>200</p></td>
+<td><p>200</p></td>
+</tr>
+<tr class="row-even"><td><p>最大功率（W）</p></td>
+<td></td>
+<td><p>3000</p></td>
+<td><p>3000</p></td>
+<td><p>3000</p></td>
+</tr>
+<tr class="row-odd"><td><p>控制方式</p></td>
+<td></td>
+<td><p>手柄，App，SDK</p></td>
+<td><p>手柄，App，SDK</p></td>
+<td><p>手柄，App，SDK</p></td>
+</tr>
+<tr class="row-even"><td><p>材质</p></td>
+<td></td>
+<td><p>铝合金/ABS</p></td>
+<td><p>铝合金/ABS</p></td>
+<td><p>铝合金/ABS</p></td>
+</tr>
+<tr class="row-odd"><td><p>运动性能</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>关节峰值扭矩（Nm）</p></td>
+<td></td>
+<td><p>120</p></td>
+<td><p>120</p></td>
+<td><p>120</p></td>
+</tr>
+<tr class="row-odd"><td><p>行走最大速度（m/s）</p></td>
+<td></td>
+<td><p>1.8</p></td>
+<td><p>1.8</p></td>
+<td><p>1.8</p></td>
+</tr>
+<tr class="row-even"><td><p>颈部运动范围（°）</p></td>
+<td><p>J1</p></td>
+<td><p>/</p></td>
+<td><p>±35</p></td>
+<td><p>±35</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>J2</p></td>
+<td><p>/</p></td>
+<td><p>±90</p></td>
+<td><p>±90</p></td>
+</tr>
+<tr class="row-even"><td><p>单臂运动范围（°）</p></td>
+<td><p>J1</p></td>
+<td><p>±90</p></td>
+<td><p>±90</p></td>
+<td><p>±90</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>J2</p></td>
+<td><p>±110</p></td>
+<td><p>±110</p></td>
+<td><p>±110</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>J3</p></td>
+<td><p>±90</p></td>
+<td><p>±90</p></td>
+<td><p>±90</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>J4</p></td>
+<td><p>-50~130</p></td>
+<td><p>-50~130</p></td>
+<td><p>-50~130</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>J5</p></td>
+<td><p>±90</p></td>
+<td><p>±90</p></td>
+<td><p>±90</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>J6</p></td>
+<td><p>0-80</p></td>
+<td><p>0-80</p></td>
+<td><p>0-80</p></td>
+</tr>
+<tr class="row-even"><td><p>腰部运动范围（°）</p></td>
+<td></td>
+<td><p>-115~205</p></td>
+<td><p>-115~205</p></td>
+<td><p>-115~205</p></td>
+</tr>
+<tr class="row-odd"><td><p>单腿运动范围（°）</p></td>
+<td><p>J1</p></td>
+<td><p>-70~110</p></td>
+<td><p>-70~110</p></td>
+<td><p>-70~110</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>J2</p></td>
+<td><p>-30~135</p></td>
+<td><p>-30~135</p></td>
+<td><p>-30~135</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>J3</p></td>
+<td><p>-115~205</p></td>
+<td><p>-115~205</p></td>
+<td><p>-115~205</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>J4</p></td>
+<td><p>-20~130</p></td>
+<td><p>-20~130</p></td>
+<td><p>-20~130</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>J5</p></td>
+<td><p>-30~35</p></td>
+<td><p>-30~35</p></td>
+<td><p>-30~35</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>J6</p></td>
+<td><p>±20</p></td>
+<td><p>±20</p></td>
+<td><p>±20</p></td>
+</tr>
+<tr class="row-odd"><td><p>通讯</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>外部通讯</p></td>
+<td></td>
+<td><p>Wi-Fi</p></td>
+<td><p>Wi-Fi</p></td>
+<td><p>Wi-Fi，4G/5G模块</p></td>
+</tr>
+<tr class="row-odd"><td><p>内部通讯</p></td>
+<td></td>
+<td><p>EtherCAT</p></td>
+<td><p>EtherCAT</p></td>
+<td><p>EtherCAT</p></td>
+</tr>
+<tr class="row-even"><td><p>硬件接口</p></td>
+<td></td>
+<td><p>USB接口*1；HDMI接口*1；RJ45接口*1</p></td>
+<td><p>USB接口*1；HDMI接口*1；RJ45接口*1</p></td>
+<td><p>USB接口*1；HDMI接口*1；RJ45接口*1</p></td>
+</tr>
+<tr class="row-odd"><td><p>主控</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>CPU</p></td>
+<td></td>
+<td><p>Intel® Core™ i5-Gen12 Processor</p></td>
+<td><p>Intel Core Ultra7 Processors 255H</p></td>
+<td><p>Intel Core Ultra7 Processors 255H</p></td>
+</tr>
+<tr class="row-odd"><td><p>内存</p></td>
+<td></td>
+<td><p>16G</p></td>
+<td><p>64G</p></td>
+<td><p>64G</p></td>
+</tr>
+<tr class="row-even"><td><p>算力</p></td>
+<td></td>
+<td><p>/</p></td>
+<td><p>96tops</p></td>
+<td><p>96tops</p></td>
+</tr>
+<tr class="row-odd"><td><p>电池性能</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>电池类型</p></td>
+<td></td>
+<td><p>锂电池</p></td>
+<td><p>锂电池</p></td>
+<td><p>锂电池</p></td>
+</tr>
+<tr class="row-odd"><td><p>额定电压 (V DC)</p></td>
+<td></td>
+<td><p>46.8</p></td>
+<td><p>46.8</p></td>
+<td><p>46.8</p></td>
+</tr>
+<tr class="row-even"><td><p>最大电压（V）</p></td>
+<td></td>
+<td><p>54.6</p></td>
+<td><p>54.6</p></td>
+<td><p>54.6</p></td>
+</tr>
+<tr class="row-odd"><td><p>最小电压（V）</p></td>
+<td></td>
+<td><p>32.5</p></td>
+<td><p>32.5</p></td>
+<td><p>32.5</p></td>
+</tr>
+<tr class="row-even"><td><p>最大电流（A）</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>充电循环次数</p></td>
+<td></td>
+<td><p>≥ 1000次</p></td>
+<td><p>≥ 1000次</p></td>
+<td><p>≥ 1000次</p></td>
+</tr>
+<tr class="row-even"><td><p>电池容量（Ah）</p></td>
+<td></td>
+<td><p>10</p></td>
+<td><p>10</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-odd"><td><p>续航时间 (h)</p></td>
+<td></td>
+<td><p>2</p></td>
+<td><p>2</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>充电时长（h）</p></td>
+<td><p>慢充</p></td>
+<td><p>2.5</p></td>
+<td><p>2.5</p></td>
+<td><p>2.5</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>快充</p></td>
+<td><p>1.2</p></td>
+<td><p>1.2</p></td>
+<td><p>1.2</p></td>
+</tr>
+<tr class="row-even"><td><p>电池重量（kg）</p></td>
+<td></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p>电池尺寸（mm）</p></td>
+<td></td>
+<td><p>180*140*95</p></td>
+<td><p>180*140*95</p></td>
+<td><p>180*140*95</p></td>
+</tr>
+<tr class="row-even"><td><p>环境</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>温度范围（°C）</p></td>
+<td></td>
+<td><p>0-50</p></td>
+<td><p>0-50</p></td>
+<td><p>0-50</p></td>
+</tr>
+<tr class="row-even"><td><p>湿度范围</p></td>
+<td></td>
+<td><p>10-90%RH</p></td>
+<td><p>10-90%RH</p></td>
+<td><p>10-90%RH</p></td>
+</tr>
+<tr class="row-odd"><td><p>使用海拔（m）</p></td>
+<td></td>
+<td><p>≤1000</p></td>
+<td><p>≤1000</p></td>
+<td><p>≤1000</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id5">
+<span id="id6"></span><h2><span class="section-number">6.2. </span>指示灯<a class="headerlink" href="#id5" title="链接到此标题。"></a></h2>
+<p>JAKA π 指示灯位于胸腔处，有以下三种类型的指示灯：</p>
+<figure class="align-center" id="id30">
+<a class="reference internal image-reference" href="_images/指示灯位置.svg"><img alt="_images/%E6%8C%87%E7%A4%BA%E7%81%AF%E4%BD%8D%E7%BD%AE.svg" src="_images/%E6%8C%87%E7%A4%BA%E7%81%AF%E4%BD%8D%E7%BD%AE.svg" style="width: 15cm;" />
+</a>
+<figcaption>
+<p><span class="caption-number">图 6.1 </span><span class="caption-text">指示灯位置</span><a class="headerlink" href="#id30" title="链接到此图片"></a></p>
+</figcaption>
+</figure>
+<table class="docutils align-default" id="id31">
+<caption><span class="caption-number">表 6.2 </span><span class="caption-text">指示灯颜色定义</span><a class="headerlink" href="#id31" title="链接到此表格。"></a></caption>
+<colgroup>
+<col style="width: 10.0%" />
+<col style="width: 30.0%" />
+<col style="width: 60.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>序号</strong></p></th>
+<th class="head"><p><strong>名称</strong></p></th>
+<th class="head"><p><strong>功能</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>1</strong></p></td>
+<td><p>机器人指示灯</p></td>
+<td><p>红色闪烁：机器人急停状态</p>
+<p>绿色常亮：机器人上电状态</p>
+<p>白色常亮：机器人开机状态</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>2</strong></p></td>
+<td><p>电源指示灯</p></td>
+<td><p>绿色闪烁：机器人开机状态</p>
+<p>红绿黄三色闪烁：电源故障</p>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>3</strong></p></td>
+<td><p>电池电量指示灯</p></td>
+<td><p>3个绿色，1个橙色：电池满电</p>
+<p>2个绿色，1个橙色：电池75%电量</p>
+<p>1个绿色，1个橙色：电池50%电量</p>
+<p>0个绿色，1个橙色：电池电量告急</p>
+<p>跑马灯：充电中</p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id7">
+<span id="id8"></span><h2><span class="section-number">6.3. </span>按钮<a class="headerlink" href="#id7" title="链接到此标题。"></a></h2>
+<p>JAKA π 有两个按钮，功能定义如下。</p>
+<figure class="align-center" id="id32">
+<a class="reference internal image-reference" href="_images/按钮位置.svg"><img alt="_images/%E6%8C%89%E9%92%AE%E4%BD%8D%E7%BD%AE.svg" src="_images/%E6%8C%89%E9%92%AE%E4%BD%8D%E7%BD%AE.svg" style="width: 6cm;" />
+</a>
+<figcaption>
+<p><span class="caption-number">图 6.2 </span><span class="caption-text">按钮位置</span><a class="headerlink" href="#id32" title="链接到此图片"></a></p>
+</figcaption>
+</figure>
+<table class="docutils align-default" id="id33">
+<caption><span class="caption-number">表 6.3 </span><span class="caption-text">按钮定义</span><a class="headerlink" href="#id33" title="链接到此表格。"></a></caption>
+<colgroup>
+<col style="width: 10.0%" />
+<col style="width: 20.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>序号</strong></p></th>
+<th class="head"><p><strong>名称</strong></p></th>
+<th class="head"><p><strong>功能</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>急停按钮</p></td>
+<td><p>按下此按钮，JAKA π 运动停止并断电，各关节卸力并倒下，机器人指示灯红色闪烁。</p>
+<p>释放此按钮，机器人退出急停状态，长按电源按钮手动恢复供电。</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>电源按钮</p></td>
+<td><p><strong>开机</strong> ：按下此按钮，JAKA π 开机，机器人指示灯白色常亮。</p>
+<p><strong>上电</strong> ：长按此按钮，JAKA π 上电，机器人指示灯绿色常亮。</p>
+<p><strong>下电</strong> ：长按此按钮，JAKA π 下电，机器人各关节卸力并倒下。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="d">
+<span id="id9"></span><h2><span class="section-number">6.4. </span>3D相机<a class="headerlink" href="#d" title="链接到此标题。"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>基础版 JAKA π 不配备3D相机，如需3D相机，请购买探索版或旗舰版 JAKA π。</p>
+</div>
+<p>JAKA π 配有一台3D双目相机，位于机器人头部。用于面部识别、物体检测、环境扫描、导航与避障。</p>
+<figure class="align-center" id="id34">
+<a class="reference internal image-reference" href="_images/相机位置.svg"><img alt="_images/%E7%9B%B8%E6%9C%BA%E4%BD%8D%E7%BD%AE.svg" src="_images/%E7%9B%B8%E6%9C%BA%E4%BD%8D%E7%BD%AE.svg" style="width: 5cm;" />
+</a>
+<figcaption>
+<p><span class="caption-number">图 6.3 </span><span class="caption-text">深度相机位置</span><a class="headerlink" href="#id34" title="链接到此图片"></a></p>
+</figcaption>
+</figure>
+<p>相机技术参数如下：</p>
+<table class="docutils align-default" id="id35">
+<caption><span class="caption-number">表 6.4 </span><span class="caption-text">相机技术参数</span><a class="headerlink" href="#id35" title="链接到此表格。"></a></caption>
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>参数名称</strong></p></th>
+<th class="head"><p><strong>参数值</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>快门方式</p></td>
+<td><p>全局快门</p></td>
+</tr>
+<tr class="row-odd"><td><p>深度测量范围</p></td>
+<td><p>0.20m~10m</p></td>
+</tr>
+<tr class="row-even"><td><p>理想工作范围</p></td>
+<td><p>0.25m~7m</p></td>
+</tr>
+<tr class="row-odd"><td><p>相对测量精度</p></td>
+<td><p>&lt; 2% (1280×800&#64;4m, 81% ROI)</p></td>
+</tr>
+<tr class="row-even"><td><p>深度图像分辨率&#64;帧率</p></td>
+<td><p>1280×800&#64;30fps</p>
+<p>640×400&#64;60fps</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>深度 FOV</p></td>
+<td><p>H 91°</p>
+<p>V 66°</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>红外相机分辨率&#64;帧率</p></td>
+<td><p>1280×800&#64;30fps</p>
+<p>640×400&#64;60fps</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>红外图像 FOV</p></td>
+<td><p>H 94°</p>
+<p>V 68°</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>彩色图像分辨率&#64;帧率</p></td>
+<td><p>1280×800&#64;30fps</p>
+<p>1280×720&#64;60fps</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>彩色图像 FOV</p></td>
+<td><p>16:10 : H 93° / V 68°</p>
+<p>16:9 : H 93° / V 61°</p>
+<p>4:3 : H 65° / V 52°</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>3D相机存在以下局限性：</p>
+<ul class="simple">
+<li><p>难以检测透明或反光障碍物。</p></li>
+<li><p>无法检测孔洞或下行的楼梯。</p></li>
+<li><p>在观察具有重复图案的结构时，无法可靠地判断深度。</p></li>
+<li><p>如果暴露在强直射光下，可能误检测出障碍物。</p></li>
+</ul>
+</section>
+<section id="id10">
+<span id="id11"></span><h2><span class="section-number">6.5. </span>激光雷达<a class="headerlink" href="#id10" title="链接到此标题。"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>仅旗舰版 JAKA π 配备激光雷达。</p>
+</div>
+<p>JAKA π 配有一个激光雷达，位于机器人腹部。用于扫描地图、导航定位、平面避障。</p>
+<figure class="align-center" id="id36">
+<a class="reference internal image-reference" href="_images/激光雷达位置.svg"><img alt="_images/%E6%BF%80%E5%85%89%E9%9B%B7%E8%BE%BE%E4%BD%8D%E7%BD%AE.svg" src="_images/%E6%BF%80%E5%85%89%E9%9B%B7%E8%BE%BE%E4%BD%8D%E7%BD%AE.svg" style="width: 5cm;" />
+</a>
+<figcaption>
+<p><span class="caption-number">图 6.4 </span><span class="caption-text">激光雷达位置</span><a class="headerlink" href="#id36" title="链接到此图片"></a></p>
+</figcaption>
+</figure>
+<p>激光雷达检测范围如下：</p>
+<ul class="simple">
+<li><p>水平方向上的检测角度范围为–45~45°，在垂直方向上的检测范围为–60~60°。</p></li>
+<li><p>检测障碍物距离范围为0.1~30m&#64;10%NIST。</p></li>
+</ul>
+<p>激光雷达存在以下局限性：</p>
+<ul class="simple">
+<li><p>无法检测透明、半透明物体。</p></li>
+<li><p>检测反光障碍物时，数据可能不准确。</p></li>
+<li><p>如果暴露在强直射光下，可能误检测出障碍物。</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>机器人无法可靠检测以下障碍物：</p>
+<ul class="simple">
+<li><p>地面坑洞，如下行楼梯、装卸区或敞口深坑。</p></li>
+<li><p>玻璃或反光材质构成的墙壁或障碍物。</p></li>
+<li><p>位于激光雷达检测高度上方的悬空障碍物。</p></li>
+<li><p>位于激光雷达检测高度下方的托盘或其他障碍物。</p></li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>若机器人驶过边缘或撞入障碍物，失去稳定性可能导致人员重伤、机器人及设备损坏。在存在上述机器人无法可靠检测的障碍物区域，必须采取以下措施：</p>
+<ul class="simple">
+<li><p>设置物理隔离，阻止机器人进入该区域。例如，在楼梯口设置防护栏。</p></li>
+<li><p>在该区域周边布置可被安全系统检测到的障碍物。</p></li>
+<li><p>切勿依赖禁区来降低风险。禁区不具备安全等级，不得用于安全保障目的。定位误差或机械故障可能导致机器人进入禁区。</p></li>
+</ul>
+</div>
+</section>
+<section id="id12">
+<span id="id13"></span><h2><span class="section-number">6.6. </span>标定刻线<a class="headerlink" href="#id12" title="链接到此标题。"></a></h2>
+<p>标定姿态即标定机器人时的姿态。机器人各关节连接处刻有标定刻线，用于机器人换关节后的标定。当所有相邻刻线对齐时，表示机器人处于标定姿态。</p>
+<p>JAKA π 标定姿态各关节角度为0°。</p>
+<p>标定刻线位置和标定姿态如下图所示。</p>
+<figure class="align-center" id="id37">
+<a class="reference internal image-reference" href="_images/标定姿态.svg"><img alt="_images/%E6%A0%87%E5%AE%9A%E5%A7%BF%E6%80%81.svg" src="_images/%E6%A0%87%E5%AE%9A%E5%A7%BF%E6%80%81.svg" style="width: 8cm;" />
+</a>
+<figcaption>
+<p><span class="caption-number">图 6.5 </span><span class="caption-text">标定姿态</span><a class="headerlink" href="#id37" title="链接到此图片"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id38">
+<a class="reference internal image-reference" href="_images/标定刻线.svg"><img alt="_images/%E6%A0%87%E5%AE%9A%E5%88%BB%E7%BA%BF.svg" src="_images/%E6%A0%87%E5%AE%9A%E5%88%BB%E7%BA%BF.svg" style="width: 16cm;" />
+</a>
+<figcaption>
+<p><span class="caption-number">图 6.6 </span><span class="caption-text">标定刻线</span><a class="headerlink" href="#id38" title="链接到此图片"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id14">
+<span id="id15"></span><h2><span class="section-number">6.7. </span>旋转方向和坐标系<a class="headerlink" href="#id14" title="链接到此标题。"></a></h2>
+<p>JAKA π 共有27个自由度，各自由度旋转方向和坐标系如下。</p>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p>基础版 JAKA π 有25自由度，头部和颈部不可旋转。</p>
+</div>
+<figure class="align-center" id="id39">
+<a class="reference internal image-reference" href="_images/旋转方向.svg"><img alt="_images/%E6%97%8B%E8%BD%AC%E6%96%B9%E5%90%91.svg" src="_images/%E6%97%8B%E8%BD%AC%E6%96%B9%E5%90%91.svg" style="width: 10cm;" />
+</a>
+<figcaption>
+<p><span class="caption-number">图 6.7 </span><span class="caption-text">关节旋转方向</span><a class="headerlink" href="#id39" title="链接到此图片"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id40">
+<a class="reference internal image-reference" href="_images/坐标系.svg"><img alt="_images/%E5%9D%90%E6%A0%87%E7%B3%BB.svg" src="_images/%E5%9D%90%E6%A0%87%E7%B3%BB.svg" style="width: 10cm;" />
+</a>
+<figcaption>
+<p><span class="caption-number">图 6.8 </span><span class="caption-text">关节坐标系</span><a class="headerlink" href="#id40" title="链接到此图片"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>X轴：红色</p></li>
+<li><p>Y轴：绿色</p></li>
+<li><p>Z轴：蓝色</p></li>
+</ul>
+</section>
+<section id="id16">
+<span id="id17"></span><h2><span class="section-number">6.8. </span>奇异点<a class="headerlink" href="#id16" title="链接到此标题。"></a></h2>
+<p>奇异点是以笛卡尔空间描述机械臂位置的一些固有点位，对关节运动无影响。遇到奇异点时，首先考虑该运动是否可以使用关节运动。其次，若在机械臂运动路径中间遇到奇异点，可以修改机械臂运动路径以绕过奇异点。此外，也可以通过改变机械臂安装位置或末端工具安装尺寸的方式，改变笛卡尔点位在机械臂关节空间下的描述。</p>
+<p>当机械臂处于奇异点时，会产生以下影响：</p>
+<ul class="simple">
+<li><p>在奇异点，机械臂会缺失一个或多个方向的运动能力。</p></li>
+<li><p>在奇异点附近，机械臂无法找到一组合适的关节角度使TCP到达期望位置。</p></li>
+<li><p>在奇异点附近，机械臂需要较大的关节速度以达到期望的TCP速度。</p></li>
+<li><p>奇异点附近的剧烈运动容易引发意外状况并缩短机械臂关节寿命。</p></li>
+</ul>
+<p>JAKA π 存在一种类型的奇异点，即当手臂的2关节角度为0°时，手臂处于奇异状态。</p>
+</section>
+<section id="id18">
+<span id="id19"></span><h2><span class="section-number">6.9. </span>电气接口<a class="headerlink" href="#id18" title="链接到此标题。"></a></h2>
+<section id="id20">
+<span id="id21"></span><h3><span class="section-number">6.9.1. </span>用户接口<a class="headerlink" href="#id20" title="链接到此标题。"></a></h3>
+<p>JAKA π 有三个用户接口，位于背部，分别为：</p>
+<figure class="align-center" id="id41">
+<a class="reference internal image-reference" href="_images/用户接口位置.svg"><img alt="_images/%E7%94%A8%E6%88%B7%E6%8E%A5%E5%8F%A3%E4%BD%8D%E7%BD%AE.svg" src="_images/%E7%94%A8%E6%88%B7%E6%8E%A5%E5%8F%A3%E4%BD%8D%E7%BD%AE.svg" style="width: 8cm;" />
+</a>
+<figcaption>
+<p><span class="caption-number">图 6.9 </span><span class="caption-text">用户接口位置</span><a class="headerlink" href="#id41" title="链接到此图片"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><strong>1</strong> HDMI接口：用于连接外部显示器。</p></li>
+<li><p><strong>2</strong> USB接口：用于连接无线手柄接收器。</p></li>
+<li><p><strong>3</strong> RJ45接口：用于实现有线网络连接，为动态IP，默认IP为10.5.5.100。</p></li>
+</ul>
+</section>
+<section id="id22">
+<span id="id23"></span><h3><span class="section-number">6.9.2. </span>充电接口<a class="headerlink" href="#id22" title="链接到此标题。"></a></h3>
+<p>JAKA π 有两个充电接口，均位于电池上。其中电池正面的接口为快充接口、背面的接口为慢充接口。默认配备快充充电器及连接线，如需慢充充电器及连接线，可额外选配。</p>
+<p>充电接口位置如下。</p>
+<blockquote>
+<div><figure class="align-center" id="id42">
+<a class="reference internal image-reference" href="_images/快充接口位置.svg"><img alt="_images/%E5%BF%AB%E5%85%85%E6%8E%A5%E5%8F%A3%E4%BD%8D%E7%BD%AE.svg" src="_images/%E5%BF%AB%E5%85%85%E6%8E%A5%E5%8F%A3%E4%BD%8D%E7%BD%AE.svg" style="width: 5cm;" />
+</a>
+<figcaption>
+<p><span class="caption-number">图 6.10 </span><span class="caption-text">快充接口位置</span><a class="headerlink" href="#id42" title="链接到此图片"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id43">
+<a class="reference internal image-reference" href="_images/慢充接口位置.svg"><img alt="_images/%E6%85%A2%E5%85%85%E6%8E%A5%E5%8F%A3%E4%BD%8D%E7%BD%AE.svg" src="_images/%E6%85%A2%E5%85%85%E6%8E%A5%E5%8F%A3%E4%BD%8D%E7%BD%AE.svg" style="width: 8cm;" />
+</a>
+<figcaption>
+<p><span class="caption-number">图 6.11 </span><span class="caption-text">慢充接口位置</span><a class="headerlink" href="#id43" title="链接到此图片"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<p>慢充接口的引脚定义如下：</p>
+<blockquote>
+<div><figure class="align-center" id="id44">
+<a class="reference internal image-reference" href="_images/慢充接口.svg"><img alt="_images/%E6%85%A2%E5%85%85%E6%8E%A5%E5%8F%A3.svg" src="_images/%E6%85%A2%E5%85%85%E6%8E%A5%E5%8F%A3.svg" style="width: 3cm;" />
+</a>
+<figcaption>
+<p><span class="caption-number">图 6.12 </span><span class="caption-text">慢充接口</span><a class="headerlink" href="#id44" title="链接到此图片"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<ul class="simple">
+<li><p>1 DC+</p></li>
+<li><p>2 DC–</p></li>
+<li><p>3 CAN_H</p></li>
+<li><p>4 CAN_L</p></li>
+</ul>
+<p>充电器参数如下：</p>
+<table class="docutils align-default" id="id45">
+<caption><span class="caption-number">表 6.5 </span><span class="caption-text">快充充电器参数</span><a class="headerlink" href="#id45" title="链接到此表格。"></a></caption>
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>项目</p></th>
+<th class="head"><p>规格</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>输入</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>额定输入电压</p></td>
+<td><p>220VAC</p></td>
+</tr>
+<tr class="row-even"><td><p>输入电压范围</p></td>
+<td><p>180-240VAC</p></td>
+</tr>
+<tr class="row-odd"><td><p>频率范围</p></td>
+<td><p>50/60 Hz</p></td>
+</tr>
+<tr class="row-even"><td><p>输入电流（Typ.）</p></td>
+<td><p>3.5A</p></td>
+</tr>
+<tr class="row-odd"><td><p>输入电流（Max.）</p></td>
+<td><p>7A</p></td>
+</tr>
+<tr class="row-even"><td><p>效率</p></td>
+<td><p>99%</p></td>
+</tr>
+<tr class="row-odd"><td><p>功率因数</p></td>
+<td><p>＞0.98&#64;230VAC</p></td>
+</tr>
+<tr class="row-even"><td><p>输出</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>额定输出电压</p></td>
+<td><p>48VDC</p></td>
+</tr>
+<tr class="row-even"><td><p>输出电压范围</p></td>
+<td><p>32-67.2VDC</p></td>
+</tr>
+<tr class="row-odd"><td><p>额定输出电流</p></td>
+<td><p>7A</p></td>
+</tr>
+<tr class="row-even"><td><p>最大输出功率</p></td>
+<td><p>600W</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id46">
+<caption><span class="caption-number">表 6.6 </span><span class="caption-text">慢充充电器参数</span><a class="headerlink" href="#id46" title="链接到此表格。"></a></caption>
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>项目</p></th>
+<th class="head"><p>规格</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>输入</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>额定输入电压</p></td>
+<td><p>220VAC</p></td>
+</tr>
+<tr class="row-even"><td><p>输入电压范围</p></td>
+<td><p>100-240VAC</p></td>
+</tr>
+<tr class="row-odd"><td><p>频率范围</p></td>
+<td><p>50/60 Hz</p></td>
+</tr>
+<tr class="row-even"><td><p>输入电流（Typ.）</p></td>
+<td><p>1.65A</p></td>
+</tr>
+<tr class="row-odd"><td><p>输入电流（Max.）</p></td>
+<td><p>3.3A</p></td>
+</tr>
+<tr class="row-even"><td><p>效率</p></td>
+<td><p>92%</p></td>
+</tr>
+<tr class="row-odd"><td><p>功率因数</p></td>
+<td><p>＞0.98&#64;230VAC</p></td>
+</tr>
+<tr class="row-even"><td><p>输出</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>额定输出电压</p></td>
+<td><p>48VDC</p></td>
+</tr>
+<tr class="row-even"><td><p>输出电压范围</p></td>
+<td><p>32-67.2VDC</p></td>
+</tr>
+<tr class="row-odd"><td><p>额定输出电流</p></td>
+<td><p>4A</p></td>
+</tr>
+<tr class="row-even"><td><p>最大输出功率</p></td>
+<td><p>300W</p></td>
+</tr>
+</tbody>
+</table>
+<p>充电和更换电池操作步骤及更换电池操作步骤参考 <a class="reference internal" href="%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97.html#id19"><span class="std std-ref">充换电流程</span></a> 。</p>
+</section>
+</section>
+<section id="id24">
+<span id="id25"></span><h2><span class="section-number">6.10. </span>无线手柄<a class="headerlink" href="#id24" title="链接到此标题。"></a></h2>
+<p>JAKA π 配备一个无线手柄，用于控制机器人运动，手柄通过USB接收器连接，连接范围为10m。</p>
+<p>连接方式如下：</p>
+<blockquote>
+<div><ul>
+<li><p>将手柄的USB接收器连接至 JAKA π 背部的USB接口。</p>
+<figure class="align-center" id="id47">
+<a class="reference internal image-reference" href="_images/手柄连接位置.svg"><img alt="_images/%E6%89%8B%E6%9F%84%E8%BF%9E%E6%8E%A5%E4%BD%8D%E7%BD%AE.svg" src="_images/%E6%89%8B%E6%9F%84%E8%BF%9E%E6%8E%A5%E4%BD%8D%E7%BD%AE.svg" style="width: 8cm;" />
+</a>
+<figcaption>
+<p><span class="caption-number">图 6.13 </span><span class="caption-text">手柄连接位置</span><a class="headerlink" href="#id47" title="链接到此图片"></a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>拨动手柄背面的模式切换开关至接收器挡位。</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/手柄切换接收器模式.png"><img alt="_images/%E6%89%8B%E6%9F%84%E5%88%87%E6%8D%A2%E6%8E%A5%E6%94%B6%E5%99%A8%E6%A8%A1%E5%BC%8F.png" src="_images/%E6%89%8B%E6%9F%84%E5%88%87%E6%8D%A2%E6%8E%A5%E6%94%B6%E5%99%A8%E6%A8%A1%E5%BC%8F.png" style="width: 5cm;" />
+</a>
+</figure>
+</li>
+<li><p>按下 <a class="reference internal" href="_images/LOGO键.png"><img alt="LOGO键" src="_images/LOGO%E9%94%AE.png" style="width: 18px;" /></a> 按钮使手柄开机，连接状态指示灯白色闪烁，手柄震动表示连接成功。</p>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>下次使用时，按一下 <a class="reference internal" href="_images/LOGO键.png"><img alt="LOGO键" src="_images/LOGO%E9%94%AE.png" style="width: 18px;" /></a> 按钮，手柄将自动连接。若无法连接，按下 FN + <a class="reference internal" href="_images/LOGO键.png"><img alt="LOGO键" src="_images/LOGO%E9%94%AE.png" style="width: 18px;" /></a> 重置信号，指示灯白色快闪，拔下再插回接收器即可。</p>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<section id="id26">
+<h3><span class="section-number">6.10.1. </span>手柄按钮<a class="headerlink" href="#id26" title="链接到此标题。"></a></h3>
+<p>手柄按键名称及功能说明如下：</p>
+<figure class="align-center" id="id48">
+<a class="reference internal image-reference" href="_images/手柄按钮.svg"><img alt="_images/%E6%89%8B%E6%9F%84%E6%8C%89%E9%92%AE.svg" src="_images/%E6%89%8B%E6%9F%84%E6%8C%89%E9%92%AE.svg" style="width: 20cm;" />
+</a>
+<figcaption>
+<p><span class="caption-number">图 6.14 </span><span class="caption-text">手柄按钮</span><a class="headerlink" href="#id48" title="链接到此图片"></a></p>
+</figcaption>
+</figure>
+<table class="docutils align-default" id="id49">
+<caption><span class="caption-number">表 6.7 </span><span class="caption-text">手柄按钮名称</span><a class="headerlink" href="#id49" title="链接到此表格。"></a></caption>
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>序号</strong></p></th>
+<th class="head"><p><strong>名称</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>LOGO键</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>Back键</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>左摇杆</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>A、B、X、Y</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>UP、DOWN、LEFT、RIGHT</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>右摇杆</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>FN键</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>Type-C充电口</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>LB键</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>RB键</p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>RT键</p></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p>LT键</p></td>
+</tr>
+<tr class="row-even"><td><p>13</p></td>
+<td><p>模式切换开关</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id50">
+<caption><span class="caption-number">表 6.8 </span><span class="caption-text">手柄按钮功能</span><a class="headerlink" href="#id50" title="链接到此表格。"></a></caption>
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>功能</strong></p></th>
+<th class="head"><p><strong>描述</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>机器人上使能</p></td>
+<td><p>使用吊绳将机器人吊起或使机器人坐下，按下Back键，若手柄震动表示关节超限位，需手动调整关节位置。</p>
+<p>一般情况下，关节超限位是由机器人低头角度过大引起的，可先按下A键使机器人下电，将机器人头部保持竖直，再尝试上电。</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>机器人下使能</p></td>
+<td><p>按下A键</p></td>
+</tr>
+<tr class="row-even"><td><p>进入准备模式</p></td>
+<td><p>按下UP键，机器人运动至行走模式的初始位置</p></td>
+</tr>
+<tr class="row-odd"><td><p>进入行走模式</p></td>
+<td><p>按LB + Y键</p></td>
+</tr>
+<tr class="row-even"><td><p>进入预设动作模式</p></td>
+<td><p>按LB + B键</p></td>
+</tr>
+<tr class="row-odd"><td><p>行走模式的运动</p></td>
+<td><p>向前走：向前推 左摇杆</p>
+<p>向后走：向后推 左摇杆</p>
+<p>左转弯：向左推 左摇杆</p>
+<p>右转弯：向右推 左摇杆</p>
+<p>左平移：向左推 右摇杆</p>
+<p>右平移：向右推 右摇杆</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>预设动作模式的运动</p></td>
+<td><p>点头: 按住RT键，再按下 <strong>UP+X+Y</strong> 选定此动作，按下RB键运行此动作</p>
+<p>摇头: 按住RT键，再按下 <strong>UP+X+B</strong> 选定此动作，按下RB键运行此动作</p>
+<p>观望: 按住RT键，再按下 <strong>Y</strong> 选定此动作，按下RB键运行此动作</p>
+<p>鼓掌: 按住RT键，再按下 <strong>B</strong> 选定此动作，按下RB键运行此动作</p>
+<p>害羞: 按住RT键，再按下 <strong>UP+X</strong> 选定此动作，按下RB键运行此动作</p>
+<p>欢呼: 按住RT键，再按下 <strong>UP+Y</strong> 选定此动作，按下RB键运行此动作</p>
+<p>比心: 按住RT键，再按下 <strong>UP+B</strong> 选定此动作，按下RB键运行此动作</p>
+<p>招手: 按住RT键，再按下 <strong>DOWN+X</strong> 选定此动作，按下RB键运行此动作</p>
+<p>双手加油: 按住RT键，再按下 <strong>DOWN+Y</strong> 选定此动作，按下RB键运行此动作</p>
+<p>拒绝: 按住RT键，再按下 <strong>DOWN+B</strong> 选定此动作，按下RB键运行此动作</p>
+<p>举手: 按住RT键，再按下 <strong>LEFT+X</strong> 选定此动作，按下RB键运行此动作</p>
+<p>可爱: 按住RT键，再按下 <strong>LEFT+Y</strong> 选定此动作，按下RB键运行此动作</p>
+<p>挠头: 按住RT键，再按下 <strong>LEFT+B</strong> 选定此动作，按下RB键运行此动作</p>
+<p>期待: 按住RT键，再按下 <strong>RIGHT+X</strong> 选定此动作，按下RB键运行此动作</p>
+<p>双手挥手低: 按住RT键，再按下 <strong>RIGHT+Y</strong> 选定此动作，按下RB键运行此动作</p>
+<p>双手挥手高: 按住RT键，再按下 <strong>RIGHT+B</strong> 选定此动作，按下RB键运行此动作</p>
+<p>思考（单手叉腰，右手转圈）: 按住RT键，再按下 <strong>X+Y</strong> 选定此动作，按下RB键运行此动作</p>
+<p>待机（无聊）: 按住RT键，再按下 <strong>Y+B</strong> 选定此动作，按下RB键运行此动作</p>
+<p>摇头晃脑（老学究）: 按住RT键，再按下 <strong>UP</strong> 选定此动作，按下RB键运行此动作</p>
+<p>拥抱: 按住RT键，再按下 <strong>DOWN</strong> 选定此动作，按下RB键运行此动作</p>
+<p>右手挥手: 按住RT键，再按下 <strong>LEFT</strong> 选定此动作，按下RB键运行此动作</p>
+<p>敬礼: 按住RT键，再按下 <strong>RIGHT</strong> 选定此动作，按下RB键运行此动作</p>
+<p>右手握手: 按住RT键，再按下 <strong>X</strong> 选定此动作，按下RB键运行此动作</p>
+<p>左手挥手: 按住RT键，再按下 <strong>X+B</strong> 选定此动作，按下RB键运行此动作</p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id27">
+<h3><span class="section-number">6.10.2. </span>手柄指示灯<a class="headerlink" href="#id27" title="链接到此标题。"></a></h3>
+<p>手柄有两个指示灯，一个为连接状态指示灯，另一个为电量指示灯，指示灯的颜色定义如下。</p>
+<figure class="align-center" id="id51">
+<a class="reference internal image-reference" href="_images/手柄指示灯.svg"><img alt="_images/%E6%89%8B%E6%9F%84%E6%8C%87%E7%A4%BA%E7%81%AF.svg" src="_images/%E6%89%8B%E6%9F%84%E6%8C%87%E7%A4%BA%E7%81%AF.svg" style="width: 10cm;" />
+</a>
+<figcaption>
+<p><span class="caption-number">图 6.15 </span><span class="caption-text">手柄指示灯</span><a class="headerlink" href="#id51" title="链接到此图片"></a></p>
+</figcaption>
+</figure>
+<table class="docutils align-default" id="id52">
+<caption><span class="caption-number">表 6.9 </span><span class="caption-text">指示灯颜色定义</span><a class="headerlink" href="#id52" title="链接到此表格。"></a></caption>
+<colgroup>
+<col style="width: 10.0%" />
+<col style="width: 30.0%" />
+<col style="width: 60.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>序号</strong></p></th>
+<th class="head"><p><strong>名称</strong></p></th>
+<th class="head"><p><strong>功能</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>1</strong></p></td>
+<td><p>连接状态指示灯</p></td>
+<td><p>白色常亮：手柄已连接</p>
+<p>白色闪烁：手柄开机，未连接设备</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>2</strong></p></td>
+<td><p>电量指示灯</p></td>
+<td><p>红色常亮：手柄充电中</p>
+<p>红色闪烁：手柄电量不足</p>
+<p>熄灭：手柄电量充足</p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id28">
+<h3><span class="section-number">6.10.3. </span>手柄充电<a class="headerlink" href="#id28" title="链接到此标题。"></a></h3>
+<p>手柄充电说明：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>充电接口：Type-C接口，推荐使用5V充电插头 + Type-C线直充。</p></li>
+<li><p>电池容量：800mAh</p></li>
+<li><p>充电时间：2小时</p></li>
+<li><p>充电电压：5V</p></li>
+<li><p>充电电流：800mA</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p>避免使用快充线充电，建议用 5V、1A 或 5V、2A 充电器；充电时手柄可能会轻微发烫，请避免过度充电导致过热损坏。</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0.html" class="btn btn-neutral float-left" title="5. 部件概览" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97.html" class="btn btn-neutral float-right" title="7. 操作指南" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有  2026, JAKA ROBOTICS。</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
