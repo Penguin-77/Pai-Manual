@@ -17,7 +17,7 @@ JAKA的程序设计者、机器人系统的设计和调试者，必须熟悉JAKA
 
 **更多信息**
 
-如果您还想了解更多的产品信息，请扫描下方二维码访问我们的官网www.jaka.com。
+如果您还想了解更多的产品信息，请扫描下方二维码访问我们的 `JAKA官网 <https://www.jaka.com>`_ 。
 
 .. figure:: ./images/官网二维码.png
     :align: left

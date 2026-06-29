@@ -9,8 +9,8 @@
   <title>6. 技术规格 &mdash; JAKA π用户手册 V01 文档</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=71b970ea" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=71b970ea" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=25fe8c91" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=25fe8c91" />
 
   
       <script src="_static/jquery.js?v=5d32c60e"></script>
@@ -36,7 +36,7 @@
           
           <a href="index.html" class="icon icon-home">
             JAKA π用户手册
-              <img src="_static/Logo1.png" class="logo" alt="Logo"/>
+              <img src="_static/Logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -763,7 +763,7 @@
 <ul class="simple">
 <li><p><strong>1</strong> HDMI接口：用于连接外部显示器。</p></li>
 <li><p><strong>2</strong> USB接口：用于连接无线手柄接收器。</p></li>
-<li><p><strong>3</strong> RJ45接口：用于实现有线网络连接，为动态IP，默认IP为10.5.5.100。</p></li>
+<li><p><strong>3</strong> RJ45接口：用于实现有线网络连接，为静态IP，默认IP为10.5.5.100。</p></li>
 </ul>
 </section>
 <section id="id22">
@@ -909,7 +909,7 @@
 </tr>
 </tbody>
 </table>
-<p>充电和更换电池操作步骤及更换电池操作步骤参考 <a class="reference internal" href="%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97.html#id19"><span class="std std-ref">充换电流程</span></a> 。</p>
+<p>充电和更换电池操作步骤及更换电池操作步骤参考 <a class="reference internal" href="%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97.html#id15"><span class="std std-ref">充换电流程</span></a> 。</p>
 </section>
 </section>
 <section id="id24">
@@ -933,7 +933,7 @@
 </a>
 </figure>
 </li>
-<li><p>按下 <a class="reference internal" href="_images/LOGO键.png"><img alt="LOGO键" src="_images/LOGO%E9%94%AE.png" style="width: 18px;" /></a> 按钮使手柄开机，连接状态指示灯白色闪烁，手柄震动表示连接成功。</p>
+<li><p>按下 <a class="reference internal" href="_images/LOGO键.png"><img alt="LOGO键" src="_images/LOGO%E9%94%AE.png" style="width: 18px;" /></a> 按钮使手柄开机，连接状态指示灯白色常亮且手柄震动表示连接成功。</p>
 <blockquote>
 <div><div class="admonition note">
 <p class="admonition-title">备注</p>
@@ -972,36 +972,39 @@
 <td><p>Back键</p></td>
 </tr>
 <tr class="row-even"><td><p>3</p></td>
-<td><p>左摇杆</p></td>
+<td><p>Start键</p></td>
 </tr>
 <tr class="row-odd"><td><p>4</p></td>
-<td><p>A、B、X、Y</p></td>
+<td><p>左摇杆</p></td>
 </tr>
 <tr class="row-even"><td><p>5</p></td>
-<td><p>UP、DOWN、LEFT、RIGHT</p></td>
+<td><p>A、B、X、Y</p></td>
 </tr>
 <tr class="row-odd"><td><p>6</p></td>
-<td><p>右摇杆</p></td>
+<td><p>UP、DOWN、LEFT、RIGHT</p></td>
 </tr>
 <tr class="row-even"><td><p>7</p></td>
-<td><p>FN键</p></td>
+<td><p>右摇杆</p></td>
 </tr>
 <tr class="row-odd"><td><p>8</p></td>
-<td><p>Type-C充电口</p></td>
+<td><p>FN键</p></td>
 </tr>
 <tr class="row-even"><td><p>9</p></td>
-<td><p>LB键</p></td>
+<td><p>Type-C充电口</p></td>
 </tr>
 <tr class="row-odd"><td><p>10</p></td>
-<td><p>RB键</p></td>
+<td><p>LB键</p></td>
 </tr>
 <tr class="row-even"><td><p>11</p></td>
-<td><p>RT键</p></td>
+<td><p>RB键</p></td>
 </tr>
 <tr class="row-odd"><td><p>12</p></td>
-<td><p>LT键</p></td>
+<td><p>RT键</p></td>
 </tr>
 <tr class="row-even"><td><p>13</p></td>
+<td><p>LT键</p></td>
+</tr>
+<tr class="row-odd"><td><p>14</p></td>
 <td><p>模式切换开关</p></td>
 </tr>
 </tbody>
@@ -1026,14 +1029,22 @@
 <tr class="row-odd"><td><p>机器人下使能</p></td>
 <td><p>按下A键</p></td>
 </tr>
-<tr class="row-even"><td><p>进入准备模式</p></td>
-<td><p>按下UP键，机器人运动至行走模式的初始位置</p></td>
+<tr class="row-even"><td><p>机器人校准姿态</p></td>
+<td><p>按下UP键，机器人运动至校准姿态</p></td>
 </tr>
-<tr class="row-odd"><td><p>进入行走模式</p></td>
+<tr class="row-odd"><td><p>进入准备模式</p></td>
+<td><p>按下DOWN键，机器人运动至行走模式的初始位置。</p>
+<p>按下LEFT键，机器人运动至预设动作模式或模仿学习模式的初始位置。</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>进入行走模式</p></td>
 <td><p>按LB + Y键</p></td>
 </tr>
-<tr class="row-even"><td><p>进入预设动作模式</p></td>
+<tr class="row-odd"><td><p>进入预设动作模式</p></td>
 <td><p>按LB + B键</p></td>
+</tr>
+<tr class="row-even"><td><p>进入模仿学习模式</p></td>
+<td><p>按LB + X键</p></td>
 </tr>
 <tr class="row-odd"><td><p>行走模式的运动</p></td>
 <td><p>向前走：向前推 左摇杆</p>
@@ -1073,6 +1084,14 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<ul class="simple">
+<li><p>推荐在平坦的硬质地面控制行走，需避开台阶、崎岖路面及大曲率坡道，防止机器人颠簸或摔倒。</p></li>
+<li><p>建议在平坦路面使用机器人以获得更可靠的运行体验，请避开高于5cm的楼梯台阶、大于10°的坡道及起伏±5cm以上的崎呕路面。</p></li>
+<li><p>非必要情况下，请勿触发急停模式、下使能模式，这类模式会导致关节卸力，可能导致机器人摔倒。</p></li>
+</ul>
+</div>
 </section>
 <section id="id27">
 <h3><span class="section-number">6.10.2. </span>手柄指示灯<a class="headerlink" href="#id27" title="链接到此标题。"></a></h3>

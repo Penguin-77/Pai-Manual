@@ -49,7 +49,7 @@ numfig_secnum_depth = 1
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
-html_logo = '_static/Logo1.png'
+html_logo = '_static/Logo.png'
 html_show_sphinx = False
 html_show_sourcelink = False
 html_copy_source = False
@@ -71,7 +71,6 @@ html_search_options = {
     'type': 'jieba',
     'lang': 'zh_CN'
 }
-
 
 # 查找图片偏好
 from sphinx.builders.html import StandaloneHTMLBuilder
