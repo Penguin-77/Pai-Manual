@@ -1,0 +1,1496 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>8.5. 语音提示与语音交互 &mdash; JAKA π用户手册 V01 文档</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=25fe8c91" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=25fe8c91" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=1229c742"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/translations.js?v=540d3cec"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="8.6. 动作交互" href="%E5%8A%A8%E4%BD%9C%E4%BA%A4%E4%BA%92.html" />
+    <link rel="prev" title="8.4. 交互注意事项" href="%E4%BA%A4%E4%BA%92%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            JAKA π用户手册
+              <img src="_static/Logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">目录</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E.html">1. 声明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E4%BA%A7%E5%93%81%E6%B8%85%E5%8D%95.html">2. 产品清单</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E6%89%8B%E5%86%8C%E6%A6%82%E8%BF%B0.html">3. 手册概述</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E5%AE%89%E5%85%A8%E8%A7%84%E8%8C%83.html">4. 安全规范</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0.html">5. 部件概览</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E6%8A%80%E6%9C%AF%E8%A7%84%E6%A0%BC.html">6. 技术规格</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97.html">7. 操作指南</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="%E8%BD%AF%E4%BB%B6%E5%8A%9F%E8%83%BD.html">8. 软件功能</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE%E8%A6%81%E6%B1%82.html">8.1. 系统配置要求</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%E5%AE%89%E8%A3%85%E4%B8%8E%E5%8D%87%E7%BA%A7.html">8.2. 安装与升级</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%E8%BF%9E%E6%8E%A5%E6%9C%BA%E5%99%A8%E4%BA%BA.html">8.3. 连接机器人</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%E4%BA%A4%E4%BA%92%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.html">8.4. 交互注意事项</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">8.5. 语音提示与语音交互</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">8.5.1. 语音提示</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">8.5.1.1. 关于语音提示</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">8.5.1.2. 开机流程与语音时间线</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">8.5.1.3. 语音提示说明</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id31">8.5.1.4. 快速对照表</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#faq">8.5.1.5. 常见问题（FAQ）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a">8.5.1.6. 附录 A：关节故障 — 完整错误含义列表</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#b">8.5.1.7. 附录 B：向售后反馈时请提供的信息</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id32">8.5.2. 语音交互</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id33">8.5.2.1. 开启语音交互</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id34">8.5.2.2. 关闭语音交互</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id35">8.5.2.3. 交互流程</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id36">8.5.2.4. 唤醒词及反应对照表</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id39">8.5.2.5. 语音指令清单及反应对照表</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id43">8.5.2.6. 示例对话</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id44">8.5.2.7. 常见问题与故障排查</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="%E5%8A%A8%E4%BD%9C%E4%BA%A4%E4%BA%92.html">8.6. 动作交互</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%AE%BE%E7%BD%AE.html">8.7. 机器人设置</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="%E8%B4%A8%E9%87%8F%E4%BF%9D%E9%9A%9C.html">9. 质量保证</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">JAKA π用户手册</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="%E8%BD%AF%E4%BB%B6%E5%8A%9F%E8%83%BD.html"><span class="section-number">8. </span>软件功能</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">8.5. </span>语音提示与语音交互</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1><span class="section-number">8.5. </span>语音提示与语音交互<a class="headerlink" href="#id1" title="链接到此标题。"></a></h1>
+<p>本章介绍机器人的语音功能，涵盖语音提示与语音交互两部分。</p>
+<p>语音提示是机器人在特定事件发生时主动向用户播报信息的方式，帮助用户及时掌握设备状态；语音交互则允许用户直接以语音向机器人下达指令或进行对话问答，实现更自然、便捷的操作体验。</p>
+<p>两者共同构成了人机之间完整的语音沟通机制。</p>
+<section id="id2">
+<h2><span class="section-number">8.5.1. </span>语音提示<a class="headerlink" href="#id2" title="链接到此标题。"></a></h2>
+<section id="id3">
+<h3><span class="section-number">8.5.1.1. </span>关于语音提示<a class="headerlink" href="#id3" title="链接到此标题。"></a></h3>
+<p>机器人内置语音助手 <strong>「派仔」</strong>（男童声）。开机自检阶段由启动程序直接播放；进入正常运行后，由控制器与业务接口在关键状态变化时触发播放。</p>
+<p>当前的语音分类有：</p>
+<table class="docutils align-default" id="id45">
+<caption><span class="caption-number">表 8.7 </span><span class="caption-text">语音分类</span><a class="headerlink" href="#id45" title="链接到此表格。"></a></caption>
+<colgroup>
+<col style="width: 26.3%" />
+<col style="width: 26.3%" />
+<col style="width: 47.4%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>类别</p></th>
+<th class="head"><p>大致时段</p></th>
+<th class="head"><p>目的</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>开机自检</strong></p></td>
+<td><p>按下电源、系统启动后的约 1 分钟内</p></td>
+<td><p>告知编号、自检进度、通讯是否正常</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>待安装升级</strong></p></td>
+<td><p>开机时若检测到升级包</p></td>
+<td><p>告知正在升级哪类固件、是否成功、是否需要断电</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>运行状态</strong></p></td>
+<td><p>机器人完成启动之后</p></td>
+<td><p>使能/通讯/故障/校零等安全与操作反馈</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>模式与控制源</strong></p></td>
+<td><p>使用 App 或切换控制方式时</p></td>
+<td><p>告知当前由谁控制、动作模式是否切换成功</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>在下列情况中，机器人 <strong>不会</strong> 进行播报，或可能无声，均属正常现象：</p>
+</div>
+<ul class="simple">
+<li><p>现场关闭了启动语音（运维配置 <code class="docutils literal notranslate"><span class="pre">JKKHAN_STARTUP_VOICE=0</span></code>）</p></li>
+<li><p>喇叭音量被调低，或外接音响未接好</p></li>
+<li><p>两条提示间隔过短，后一条被系统自动合并/跳过（约 3 秒内）</p></li>
+<li><p>控制源实际未变化（例如重复登录 App）——不会重复播报「切换到应用」</p></li>
+</ul>
+<p><strong>若完全无声</strong>，请检查机器人外放音量，或联系售后确认语音功能是否启用。</p>
+</section>
+<section id="id4">
+<h3><span class="section-number">8.5.1.2. </span>开机流程与语音时间线<a class="headerlink" href="#id4" title="链接到此标题。"></a></h3>
+<p>从按下电源到可操控，典型顺序如下（部分步骤视现场配置可能省略）：</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[上电]
+   ↓
+① 身份与自检开始 ——「我是派仔 X 号，开始上电自检」
+   ↓
+（可选）电源模块检测失败 ——「未检测到电源管理模块，执行上电失败」
+   ↓
+（可选）发现待安装升级包 ——「检测到 XX 升级包」→「开始升级…」→ 成功/失败
+   ↓
+（可选）SCB 类升级成功 ——「请断电重启」（连续 3 次，间隔约 3 秒）
+   ↓
+② 通讯自检结果 ——「自检通过」 或 「自检超时，仅检测到 N 个从站，期望 30 个从站」
+   ↓
+[系统进入正常运行]
+   ↓
+③ 全部关节通讯就绪 ——「通讯正常，所有关节已就绪」
+   ↓
+（用户/App 操作上使能后）
+④ 使能结果 —— 成功或失败（见第 4 节）
+   ↓
+（日常使用）模式切换、控制源切换、故障、校零等
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p><strong>机器人编号</strong>：开机时播报「我是派仔 X 号」中的 X，为产线写入的 SN1 生产流水号（5 位，如 SN1=2012345 则播报「12345 号」）。未写入或读取失败时，回退为默认 1 号。</p>
+</div>
+</section>
+<section id="id5">
+<h3><span class="section-number">8.5.1.3. </span>语音提示说明<a class="headerlink" href="#id5" title="链接到此标题。"></a></h3>
+<section id="id6">
+<h4><span class="section-number">8.5.1.3.1. </span>开机自检阶段语音说明（启动时）<a class="headerlink" href="#id6" title="链接到此标题。"></a></h4>
+<section id="id7">
+<h5><span class="section-number">8.5.1.3.1.1. </span>开始自检<a class="headerlink" href="#id7" title="链接到此标题。"></a></h5>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>项目</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>何时播放</strong></p></td>
+<td><p>系统启动后、等待各关节通讯模块上线之前</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>播报内容</strong></p></td>
+<td><p>系统完成 SCB 上电后、等待各关节通讯模块全部上线之前</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>含义</strong></p></td>
+<td><p>机器人已通电，正在按本机流水号进行自检</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>您需要做什么</strong></p></td>
+<td><p>保持机器人静止，等待后续提示；不要强行拖动关节</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>未听到编号或听到“1号”</strong></p></td>
+<td><p>可能 SN1 尚未写入或通讯暂不可用；产线应完成 SN 写入后再交付客户</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id8">
+<h5><span class="section-number">8.5.1.3.1.2. </span>电源管理模块未找到（属于异常情况）<a class="headerlink" href="#id8" title="链接到此标题。"></a></h5>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>项目</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>何时播放</strong></p></td>
+<td><p>启动后约 20 秒内，系统未检测到任何 EtherCAT 从站（含电源管理模块）</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>播报内容</strong></p></td>
+<td><p><strong>「未检测到电源管理模块，执行上电失败」</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>含义</strong></p></td>
+<td><p>未能完成给关节驱动上电的关键步骤</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>可能后果</strong></p></td>
+<td><p>后续自检可能报「从站数量不足」；关节可能无法正常通讯或使能</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>建议排查</strong></p></td>
+<td><p>① 确认主电源、控制柜电源已打开 ② 检查通讯线缆是否松动 ③ 若刚搬运过机器人，稍等 30 秒再重启 ④ 仍无效请联系售后</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id9">
+<h5><span class="section-number">8.5.1.3.1.3. </span>通讯自检 — 通过<a class="headerlink" href="#id9" title="链接到此标题。"></a></h5>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>项目</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>何时播放</strong></p></td>
+<td><p>在约定时间内（默认约 40 秒），全部 30 个通讯从站均已上线</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>播报内容</strong></p></td>
+<td><p><strong>「自检通过」</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>含义</strong></p></td>
+<td><p>硬件通讯链路正常，系统将继续启动主程序</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>您需要做什么</strong></p></td>
+<td><p>等待数秒至系统完全就绪；随后可能听到「通讯正常，所有关节已就绪」</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id10">
+<h5><span class="section-number">8.5.1.3.1.4. </span>通讯自检 — 超时（警告）<a class="headerlink" href="#id10" title="链接到此标题。"></a></h5>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>项目</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>何时播放</strong></p></td>
+<td><p>等待超时后，上线的从站数仍少于期望的 30 个</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>播报内容</strong></p></td>
+<td><p><strong>「自检超时，仅检测到 N 个从站，期望 30 个从站」</strong>（N 为实际检测数量）</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>含义</strong></p></td>
+<td><p>部分关节或模块未成功接入通讯网络</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>可能后果</strong></p></td>
+<td><p>系统<strong>仍会继续启动</strong>，但对应关节可能无法使能、无反馈或频繁报警</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>建议排查</strong></p></td>
+<td><p>① 记录 N 与 30 的差值，判断大致缺失模块数量 ② 检查近期是否拆装过某条腿/臂 ③ 查看是否有关节 LED 或驱动器异常 ④ 重启一次；若 N 每次相同，重点查对应部位接线 ⑤ 联系售后并提供 N 的数值</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="id11">
+<h4><span class="section-number">8.5.1.3.2. </span>待安装升级相关语音（开机时，可选）<a class="headerlink" href="#id11" title="链接到此标题。"></a></h4>
+<p>若运维人员事先将升级包放入指定目录，<strong>下次重启</strong>时会自动安装。此过程可能伴随以下语音。</p>
+<section id="id12">
+<h5><span class="section-number">8.5.1.3.2.1. </span>发现升级包<a class="headerlink" href="#id12" title="链接到此标题。"></a></h5>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>播报内容（按包类型）</p></th>
+<th class="head"><p>含义</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>「检测到控制器升级包」</strong></p></td>
+<td><p>将更新机器人主控软件</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>「检测到伺服升级包」</strong></p></td>
+<td><p>将更新关节驱动器固件</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>「检测到 SCB 升级包」</strong></p></td>
+<td><p>将更新 SCB/ESCB 相关固件</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>「检测到升级包」</strong></p></td>
+<td><p>类型未能识别，按通用流程处理</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>您需要做什么</strong>：不要断电、不要操作机器人，等待后续「开始升级…」及结果提示。</p>
+</section>
+<section id="id13">
+<h5><span class="section-number">8.5.1.3.2.2. </span>开始升级<a class="headerlink" href="#id13" title="链接到此标题。"></a></h5>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>播报内容</p></th>
+<th class="head"><p>对应类型</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>「开始升级控制器」</strong></p></td>
+<td><p>控制器</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>「开始升级伺服」</strong></p></td>
+<td><p>伺服</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>「开始升级 SCB」</strong></p></td>
+<td><p>SCB</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>「开始升级」</strong></p></td>
+<td><p>未知类型</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id14">
+<h5><span class="section-number">8.5.1.3.2.3. </span>升级结果<a class="headerlink" href="#id14" title="链接到此标题。"></a></h5>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>播报内容</p></th>
+<th class="head"><p>含义</p></th>
+<th class="head"><p>建议操作</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>「控制器升级完成」</strong></p></td>
+<td><p>主控软件已更新</p></td>
+<td><p>系统会继续启动；若 App 提示版本变化，以 App 为准</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>「伺服升级完成」</strong></p></td>
+<td><p>全部伺服固件已刷写</p></td>
+<td><p>系统会自动断电再上电一次驱动；完成后继续启动</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>「SCB 升级完成」</strong></p></td>
+<td><p>SCB 固件已写入</p></td>
+<td><p><strong>必须人工断电重启</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>「升级完成」</strong></p></td>
+<td><p>未知类型成功</p></td>
+<td><p>观察机器人是否正常进入待机</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>「控制器 / 伺服 / SCB / 升级失败」</strong></p></td>
+<td><p>对应类型失败</p></td>
+<td><p>升级包会被移到失败目录；<strong>机器人仍会尝试正常启动</strong>，但版本未变；请联系售后，勿重复放入同一损坏包</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id15">
+<h5><span class="section-number">8.5.1.3.2.4. </span>伺服升级进度（过程中）<a class="headerlink" href="#id15" title="链接到此标题。"></a></h5>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>项目</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>何时播放</strong></p></td>
+<td><p>伺服固件逐个刷写时，每完成一个关节可能播报一次</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>播报内容</strong></p></td>
+<td><p><strong>「伺服升级已完成 N」</strong>（N 为已完成数量）</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>含义</strong></p></td>
+<td><p>升级进行中，请耐心等待</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>您需要做什么</strong></p></td>
+<td><p>不要断电、不要触碰关节，直至听到「伺服升级完成」</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="scb">
+<h5><span class="section-number">8.5.1.3.2.5. </span>SCB 升级后 — 请断电重启<a class="headerlink" href="#scb" title="链接到此标题。"></a></h5>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>项目</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>何时播放</strong></p></td>
+<td><p>SCB/ESCB 升级<strong>成功</strong>后</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>播报内容</strong></p></td>
+<td><p><strong>「请断电重启」</strong>（<strong>连续 3 次</strong>，每次间隔约 3 秒）</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>含义</strong></p></td>
+<td><p>新固件需完整断电才能生效</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>您需要做什么</strong></p></td>
+<td><p>① 关闭机器人主电源 ② 等待约 5～10 秒 ③ 再次上电 ④ 确认听到正常自检语音</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p><strong>重要</strong>：忽略此提示可能导致 SCB 工作异常或通讯不稳定。</p>
+</div>
+</section>
+</section>
+<section id="id16">
+<h4><span class="section-number">8.5.1.3.3. </span>正常运行阶段语音（启动完成后）<a class="headerlink" href="#id16" title="链接到此标题。"></a></h4>
+<p>以下语音在机器人主程序运行期间播放，与日常操作和安全密切相关。</p>
+<section id="id17">
+<h5><span class="section-number">8.5.1.3.3.1. </span>全部关节通讯就绪<a class="headerlink" href="#id17" title="链接到此标题。"></a></h5>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>项目</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>何时播放</strong></p></td>
+<td><p>所有关节驱动器进入正常通讯状态，且稳定约 1 秒后（仅首次）</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>播报内容</strong></p></td>
+<td><p><strong>「通讯正常，所有关节已就绪」</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>含义</strong></p></td>
+<td><p>硬件链路 OK，可以进行使能等操作</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>若未听到</strong></p></td>
+<td><p>可能启动阶段已报自检超时；或语音功能关闭；通讯可能仍在恢复中</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id18">
+<h5><span class="section-number">8.5.1.3.3.2. </span>部分关节通讯异常<a class="headerlink" href="#id18" title="链接到此标题。"></a></h5>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>项目</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>何时播放</strong></p></td>
+<td><p>原先全部就绪，之后有任一关节退出正常通讯状态</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>播报内容</strong></p></td>
+<td><p><strong>「注意，部分关节通讯未就绪，请检查接线与上电」</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>含义</strong></p></td>
+<td><p>通讯中断或不稳定</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>可能后果</strong></p></td>
+<td><p>若当时处于使能状态，系统可能<strong>自动下使能</strong>以保护安全</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>建议排查</strong></p></td>
+<td><p>① 立即停止使用 ② 检查报错部位线缆、接插件 ③ 重启；若反复出现，记录发生时的动作（如某条腿大幅摆动后）并联系售后</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id19">
+<h5><span class="section-number">8.5.1.3.3.3. </span>上使能成功<a class="headerlink" href="#id19" title="链接到此标题。"></a></h5>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>项目</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>何时播放</strong></p></td>
+<td><p>全部关节成功进入使能状态，且稳定约半秒后</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>播报内容</strong></p></td>
+<td><p><strong>「所有关节已上使能，可以开始运动」</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>含义</strong></p></td>
+<td><p>电机已通电出力，可按当前模式接收运动指令</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>您需要做什么</strong></p></td>
+<td><p>确认周围无障碍物、人员安全后再发运动指令</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id20">
+<h5><span class="section-number">8.5.1.3.3.4. </span>下使能<a class="headerlink" href="#id20" title="链接到此标题。"></a></h5>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>项目</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>何时播放</strong></p></td>
+<td><p>全部关节退出使能状态，且稳定约半秒后</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>播报内容</strong></p></td>
+<td><p><strong>「所有关节已下使能，电机已停止出力」</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>含义</strong></p></td>
+<td><p>关节处于松弛/阻尼状态，不再主动跟踪运动指令</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>常见触发</strong></p></td>
+<td><p>用户或 App 主动下使能；通讯异常自动保护；紧急停止</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id21">
+<h5><span class="section-number">8.5.1.3.3.5. </span>无法上使能（姿态超限）<a class="headerlink" href="#id21" title="链接到此标题。"></a></h5>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>项目</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>何时播放</strong></p></td>
+<td><p>请求上使能时，有关节当前位置超出软件安全范围</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>播报内容</strong></p></td>
+<td><p><strong>「无法上使能，有关节超出安全范围，请先调整姿态」</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>含义</strong></p></td>
+<td><p>为保护关节与人员，拒绝使能</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>您需要做什么</strong></p></td>
+<td><p>① <strong>不要强行拖动使能</strong> ② 手动将关节摆回合理姿态（或关机后调整） ③ 再次尝试上使能 ④ 若姿态正常仍失败，可能存在传感器/校零问题，联系售后</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id22">
+<h5><span class="section-number">8.5.1.3.3.6. </span>关节报警（故障）<a class="headerlink" href="#id22" title="链接到此标题。"></a></h5>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>项目</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>何时播放</strong></p></td>
+<td><p>任一关节进入故障/报警状态，且稳定约半秒后</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>播报内容（详细模式，默认）</strong></p></td>
+<td><p><strong>「注意，[部位]，[错误原因]，请立即下使能并检查」</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>播报内容（简化模式）</strong></p></td>
+<td><p><strong>「关节报警，请立即下使能并检查」</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>多部位同时报警</strong></p></td>
+<td><p><strong>「注意，多个部位关节报警，请立即下使能并检查」</strong></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>部位包括</strong>：头部、腰部、左臂、右臂、左腿、右腿。</p>
+<p><strong>常见错误原因举例</strong>（完整列表见附录 A）：</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>您可能听到的</p></th>
+<th class="head"><p>大致含义</p></th>
+<th class="head"><p>现场可尝试</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>伺服过压 / 伺服欠压</p></td>
+<td><p>供电异常</p></td>
+<td><p>检查电源、重启</p></td>
+</tr>
+<tr class="row-odd"><td><p>电机过温 / 伺服过温</p></td>
+<td><p>过热保护</p></td>
+<td><p>停机冷却 10～15 分钟</p></td>
+</tr>
+<tr class="row-even"><td><p>电机过载</p></td>
+<td><p>负载过大或卡阻</p></td>
+<td><p>下使能，检查是否碰撞、缠绕</p></td>
+</tr>
+<tr class="row-odd"><td><p>编码器校零失败</p></td>
+<td><p>零点数据异常</p></td>
+<td><p>勿继续使能；联系售后校零</p></td>
+</tr>
+<tr class="row-even"><td><p>EtherCAT 通讯故障</p></td>
+<td><p>通讯中断</p></td>
+<td><p>查线缆、重启</p></td>
+</tr>
+<tr class="row-odd"><td><p>位置偏差过大</p></td>
+<td><p>跟踪误差超限</p></td>
+<td><p>下使能，检查是否被阻挡</p></td>
+</tr>
+<tr class="row-even"><td><p>上使能失败</p></td>
+<td><p>驱动器内部拒绝使能</p></td>
+<td><p>下使能后重启；仍失败联系售后</p></td>
+</tr>
+<tr class="row-odd"><td><p>关节报警（原因未知）</p></td>
+<td><p>错误码未收录或无法识别</p></td>
+<td><p>记录发生时的动作，联系售后</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>您必须做什么</strong>：</p>
+<ol class="arabic simple">
+<li><p><strong>立即下使能</strong>（App 或物理急停）</p></li>
+<li><p>不要继续发运动指令</p></li>
+<li><p>观察是否有冒烟、异响、异味</p></li>
+<li><p>故障消除并稳定约半秒后，会听到 <strong>「关节故障已排除，可重新上使能」</strong></p></li>
+<li><p>确认原因前不要盲目再次使能</p></li>
+</ol>
+</section>
+<section id="id23">
+<h5><span class="section-number">8.5.1.3.3.7. </span>关节故障已排除<a class="headerlink" href="#id23" title="链接到此标题。"></a></h5>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>项目</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>何时播放</strong></p></td>
+<td><p>全部关节故障位清除，且稳定约半秒后</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>播报内容</strong></p></td>
+<td><p><strong>「关节故障已排除，可重新上使能」</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>含义</strong></p></td>
+<td><p>驱动器不再报故障，可以尝试恢复作业</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>您需要做什么</strong></p></td>
+<td><p>先确认故障原因已解决（无卡阻、无过热），再重新上使能</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id24">
+<h5><span class="section-number">8.5.1.3.3.8. </span>关节校零（校零）<a class="headerlink" href="#id24" title="链接到此标题。"></a></h5>
+<p>通过 App 或维护工具对单个或全部关节执行「校零」时：</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>播报内容</p></th>
+<th class="head"><p>何时</p></th>
+<th class="head"><p>建议</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>「校零成功」</strong></p></td>
+<td><p>校零完成且位置验证通过</p></td>
+<td><p>可继续后续操作</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>「校零失败，请检查关节状态」</strong></p></td>
+<td><p>校零指令失败或位置未到位</p></td>
+<td><p>确认关节未使能、无故障、无机械卡阻后重试</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>「关节名称不存在」</strong></p></td>
+<td><p>指定了不存在的关节名</p></td>
+<td><p>检查 App 或工具中的关节名称是否正确</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p><strong>安全提示</strong>：校零应在机器人<strong>静止、下使能</strong>且<strong>无人员触碰关节</strong>时进行；运动过程中不可校零。</p>
+</div>
+</section>
+</section>
+<section id="id25">
+<h4><span class="section-number">8.5.1.3.4. </span>电池电量过低<a class="headerlink" href="#id25" title="链接到此标题。"></a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>项目</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>「何时播放」</strong></p></td>
+<td><p>主电池相对电量（SOC）首次降至 20%、10%、5% 以下各一次；电量回升超过对应阈值约 2% 后再次下降，会重新提示</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>「播报内容（20%）」</strong></p></td>
+<td><p><strong>电池电量低于百分之二十，请及时充电</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>「播报内容（10%）」</strong></p></td>
+<td><p><strong>电池电量低于百分之十，请及时充电</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>「播报内容（5%）」</strong></p></td>
+<td><p><strong>电池电量严重，请立即充电</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>含义</p></td>
+<td><p>电池余量不足，继续作业可能导致意外下电</p></td>
+</tr>
+<tr class="row-odd"><td><p>可能后果</p></td>
+<td><p>不会自动下使能，但电量继续下降可能导致系统断电</p></td>
+</tr>
+<tr class="row-even"><td><p>您需要做什么</p></td>
+<td><p>① 尽快连接充电器或更换满电电池 ② 低电量时避免大幅度、长时间运动 ③ 5% 提示后建议停止作业并充电</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="app">
+<h4><span class="section-number">8.5.1.3.5. </span>运动模式切换语音（App / 遥控）<a class="headerlink" href="#app" title="链接到此标题。"></a></h4>
+<p>当通过 App 动作库、回 Home 按钮等请求切换机器人<strong>运动模式</strong>时，系统会校验「当前状态是否允许切换到目标模式」。</p>
+<section id="id26">
+<h5><span class="section-number">8.5.1.3.5.1. </span>切换成功<a class="headerlink" href="#id26" title="链接到此标题。"></a></h5>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>项目</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>何时播放</strong></p></td>
+<td><p>模式切换请求通过校验并已下发</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>播报内容（默认）</strong></p></td>
+<td><p><strong>「模式切换成功，模式编号 [数字]」</strong>（按目标模式编号逐位朗读，如切换到行走模式编号 8，则读「八」；回 Home 为 904，则读「九」「零」「四」）</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>含义</strong></p></td>
+<td><p>机器人已开始或即将执行对应模式</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>您需要做什么</strong></p></td>
+<td><p>观察机器人实际动作是否符合预期；App 上当前模式显示应同步更新</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id27">
+<h5><span class="section-number">8.5.1.3.5.2. </span>切换失败<a class="headerlink" href="#id27" title="链接到此标题。"></a></h5>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>项目</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>何时播放</strong></p></td>
+<td><p>当前状态不允许切换到目标模式（例如待机中直接点「行走」）</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>播报内容</strong></p></td>
+<td><p><strong>「模式切换失败，模式编号 [数字]」</strong> 或 <strong>「当前状态不允许切换该模式」</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>含义</strong></p></td>
+<td><p>请求被拒绝，机器人保持原状态</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>您需要做什么</strong></p></td>
+<td><p>① 查看 App 动作库中<strong>可点击</strong>（未灰显）的动作 ② 按推荐顺序切换（如先「起立」再「行走」） ③ 勿连续快速点击多个动作</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>常见场景</strong>：</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>操作</p></th>
+<th class="head"><p>可能结果</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>在错误状态下点「行走」</p></td>
+<td><p>切换失败语音</p></td>
+</tr>
+<tr class="row-odd"><td><p>在「行走」中点「回 Home」</p></td>
+<td><p>若切换表允许则成功，否则失败</p></td>
+</tr>
+<tr class="row-even"><td><p>重复点击同一已激活模式</p></td>
+<td><p>可能无语音（状态未变）</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="id28">
+<h4><span class="section-number">8.5.1.3.6. </span>控制源切换语音（App 与手柄）<a class="headerlink" href="#id28" title="链接到此标题。"></a></h4>
+<p>机器人同一时刻只能由<strong>一种方式</strong>主控：物理手柄、手机 App，或（维护用）按键。</p>
+<section id="id29">
+<h5><span class="section-number">8.5.1.3.6.1. </span>播报格式<a class="headerlink" href="#id29" title="链接到此标题。"></a></h5>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>项目</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>播报内容</strong></p></td>
+<td><p><strong>「控制源切换，从 [来源] 到 [目标]」</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>来源/目标取值</strong></p></td>
+<td><p><strong>手柄</strong>、<strong>应用</strong>、<strong>按键</strong></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>：</p>
+<ul class="simple">
+<li><p>登录 App 成功：<strong>「控制源切换，从手柄到应用」</strong> — 此后 App 摇杆/动作库生效，手柄运动指令被忽略</p></li>
+<li><p>退出 App / 登出：<strong>「控制源切换，从应用到手柄」</strong> — 恢复手柄控制</p></li>
+</ul>
+</section>
+<section id="id30">
+<h5><span class="section-number">8.5.1.3.6.2. </span>何时会 / 不会播报<a class="headerlink" href="#id30" title="链接到此标题。"></a></h5>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>情况</p></th>
+<th class="head"><p>是否播报</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>首次登录 App，控制源从手柄变为应用</p></td>
+<td><p>播报</p></td>
+</tr>
+<tr class="row-odd"><td><p>关闭 App 或登出，切回手柄</p></td>
+<td><p>播报</p></td>
+</tr>
+<tr class="row-even"><td><p>已登录 App 再次登录</p></td>
+<td><p>通常不播报（来源未变）</p></td>
+</tr>
+<tr class="row-odd"><td><p>仅打开 App 但未登录</p></td>
+<td><p>不切换，无语音</p></td>
+</tr>
+<tr class="row-even"><td><p>网关未启用控制源桥接（运维配置）</p></td>
+<td><p>无语音，控制源可能不变</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>您需要知道的</strong>：</p>
+<ul class="simple">
+<li><p>听到「从手柄到应用」后，请使用 App 操作；此时摇动手柄<strong>不会</strong>驱动机器人。</p></li>
+<li><p>听到「从应用到手柄」后，App 控制失效，请使用手柄。</p></li>
+<li><p>若 App 提示「物理手柄占用」类信息，请先确认是否需登出其他终端或切回 App 控制。</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="id31">
+<h3><span class="section-number">8.5.1.4. </span>快速对照表<a class="headerlink" href="#id31" title="链接到此标题。"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>语音关键词</p></th>
+<th class="head"><p>严重程度</p></th>
+<th class="head"><p>能否继续用</p></th>
+<th class="head"><p>首要动作</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>开始上电自检</p></td>
+<td><p>信息</p></td>
+<td><p>等待</p></td>
+<td><p>勿动关节</p></td>
+</tr>
+<tr class="row-odd"><td><p>自检通过</p></td>
+<td><p>正常</p></td>
+<td><p>可以</p></td>
+<td><p>等待就绪</p></td>
+</tr>
+<tr class="row-even"><td><p>自检超时</p></td>
+<td><p>警告</p></td>
+<td><p>谨慎使用</p></td>
+<td><p>查缺失模块/接线</p></td>
+</tr>
+<tr class="row-odd"><td><p>未检测到电源管理模块</p></td>
+<td><p>异常</p></td>
+<td><p>不建议</p></td>
+<td><p>查电源与通讯</p></td>
+</tr>
+<tr class="row-even"><td><p>检测到/开始/完成/失败 升级</p></td>
+<td><p>信息异常</p></td>
+<td><p>视结果</p></td>
+<td><p>失败联系售后；SCB 成功需断电</p></td>
+</tr>
+<tr class="row-odd"><td><p>请断电重启</p></td>
+<td><p>必须执行</p></td>
+<td><p>暂停</p></td>
+<td><p>完整断电再上电</p></td>
+</tr>
+<tr class="row-even"><td><p>通讯正常，所有关节已就绪</p></td>
+<td><p>正常</p></td>
+<td><p>可以</p></td>
+<td><p>可准备使能</p></td>
+</tr>
+<tr class="row-odd"><td><p>部分关节通讯未就绪</p></td>
+<td><p>异常</p></td>
+<td><p>停止</p></td>
+<td><p>查接线，勿使能</p></td>
+</tr>
+<tr class="row-even"><td><p>所有关节已上使能</p></td>
+<td><p>正常</p></td>
+<td><p>可以</p></td>
+<td><p>确认安全后运动</p></td>
+</tr>
+<tr class="row-odd"><td><p>所有关节已下使能</p></td>
+<td><p>信息</p></td>
+<td><p>暂停运动</p></td>
+<td><p>—</p></td>
+</tr>
+<tr class="row-even"><td><p>无法上使能，超出安全范围</p></td>
+<td><p>警告</p></td>
+<td><p>不能使能</p></td>
+<td><p>调整姿态</p></td>
+</tr>
+<tr class="row-odd"><td><p>注意…关节报警</p></td>
+<td><p>危险</p></td>
+<td><p>立即停止</p></td>
+<td><p>下使能、排查</p></td>
+</tr>
+<tr class="row-even"><td><p>关节故障已排除</p></td>
+<td><p>恢复</p></td>
+<td><p>谨慎恢复</p></td>
+<td><p>确认原因后再使能</p></td>
+</tr>
+<tr class="row-odd"><td><p>较零成功/失败</p></td>
+<td><p>信息/警告</p></td>
+<td><p>视结果</p></td>
+<td><p>失败则查关节状态</p></td>
+</tr>
+<tr class="row-even"><td><p>电池电量低于百分之二十/十/严重不足</p></td>
+<td><p>警告</p></td>
+<td><p>谨慎使用</p></td>
+<td><p>尽快充电</p></td>
+</tr>
+<tr class="row-odd"><td><p>模式切换成功/失败</p></td>
+<td><p>信息/提示</p></td>
+<td><p>视结果</p></td>
+<td><p>失败则换合法动作</p></td>
+</tr>
+<tr class="row-even"><td><p>控制源切换</p></td>
+<td><p>信息</p></td>
+<td><p>可以</p></td>
+<td><p>确认当前用 App 还是手柄</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="faq">
+<h3><span class="section-number">8.5.1.5. </span>常见问题（FAQ）<a class="headerlink" href="#faq" title="链接到此标题。"></a></h3>
+<p><strong>Q1：开机只听到「我是派仔 1 号…」，但我这台不是 1 号</strong>   A：开机编号来自 SN1 生产流水号。若听到 1 号，多为 SN1 未写入、读取失败，或流水号确为 1。产线应在交付前写入正确 SN1；也可由售后核对 SN 页读回值。</p>
+<p><strong>Q2：开机只听到「我是派仔 X 号…」，之后很久没声音？</strong>  A：可能仍在等待 30 个模块上线（最长约 40 秒），或正在执行待安装升级（可能数分钟）。若超过 5 分钟仍无「自检通过/超时」，请联系售后。</p>
+<p><strong>Q3：「自检超时」后机器人还能演示吗？</strong>   A：不建议正式演示。缺失模块对应关节可能无力、乱报故障或运动不协调。应优先修复通讯。</p>
+<p><strong>Q4：为什么使能时没有语音？</strong>   A：可能语音间隔内已有其他播报被跳过；或使能未真正成功（查 App 状态）；或语音功能被关闭。</p>
+<p><strong>Q5：故障语音能告诉是哪个具体关节吗？</strong>   A：语音按<strong>身体部位</strong>（如「左腿」）播报，并给出<strong>错误类型</strong>中文说明，不会念英文关节名。更细信息需售后通过日志查看。</p>
+<p><strong>Q6：同一次故障会反复播报吗？</strong>   A：同一次故障持续期间通常<strong>只播报一次</strong>；故障消除后会播报「已排除」；再次故障会再次播报。</p>
+<p><strong>Q7：如何关闭语音？</strong>   A：一般用户无需关闭。若现场需静音（如展会），请联系运维人员配置，不建议自行改系统。</p>
+<p><strong>Q8：App 显示切换成功但没听到语音？</strong>   A：切换可能实际成功，语音因间隔限制或音量未播出。以 App 状态与机器人动作为准；若两者不一致再联系支持。</p>
+</section>
+<section id="a">
+<h3><span class="section-number">8.5.1.6. </span>附录 A：关节故障 — 完整错误含义列表<a class="headerlink" href="#a" title="链接到此标题。"></a></h3>
+<p>以下为系统可播报的伺服错误中文说明（按语音原文）。若听到其中任一条，均应先<strong>下使能</strong>再处理。</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>语音中的错误说明</p></th>
+<th class="head"><p>语音中的错误说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>自学习过流</p></td>
+<td><p>模块过载</p></td>
+</tr>
+<tr class="row-odd"><td><p>伺服过压</p></td>
+<td><p>保险丝断路</p></td>
+</tr>
+<tr class="row-even"><td><p>伺服欠压</p></td>
+<td><p>编码器校零失败</p></td>
+</tr>
+<tr class="row-odd"><td><p>输出缺相</p></td>
+<td><p>电机过温</p></td>
+</tr>
+<tr class="row-even"><td><p>温度传感器异常</p></td>
+<td><p>伺服过温</p></td>
+</tr>
+<tr class="row-odd"><td><p>DH 参数标定异常</p></td>
+<td><p>版本降级错误</p></td>
+</tr>
+<tr class="row-even"><td><p>硬件版本或参数设置错误</p></td>
+<td><p>伺服 Zu 系列错误</p></td>
+</tr>
+<tr class="row-odd"><td><p>内部参数错误</p></td>
+<td><p>内部错误</p></td>
+</tr>
+<tr class="row-even"><td><p>EEPROM 错误</p></td>
+<td><p>上使能失败</p></td>
+</tr>
+<tr class="row-odd"><td><p>内部连接错误</p></td>
+<td><p>伺服过功率</p></td>
+</tr>
+<tr class="row-even"><td><p>绝对编码器内部故障</p></td>
+<td><p>编码器内部故障预警</p></td>
+</tr>
+<tr class="row-odd"><td><p>电机过载</p></td>
+<td><p>电机抱闸故障</p></td>
+</tr>
+<tr class="row-even"><td><p>高频注入反向</p></td>
+<td><p>摩擦力异常</p></td>
+</tr>
+<tr class="row-odd"><td><p>转矩辨识异常</p></td>
+<td><p>电机抱闸电流异常</p></td>
+</tr>
+<tr class="row-even"><td><p>绝对编码器连接错误</p></td>
+<td><p>编码器电池欠压</p></td>
+</tr>
+<tr class="row-odd"><td><p>编码器数据校验错误</p></td>
+<td><p>编码器存储角度错误</p></td>
+</tr>
+<tr class="row-even"><td><p>编码器计数错误</p></td>
+<td><p>双编码器校验错误</p></td>
+</tr>
+<tr class="row-odd"><td><p>Z 线捕捉故障</p></td>
+<td><p>编码器磁信号异常</p></td>
+</tr>
+<tr class="row-even"><td><p>增量编码器连接异常</p></td>
+<td><p>转矩前馈超限</p></td>
+</tr>
+<tr class="row-odd"><td><p>EtherCAT 通讯故障</p></td>
+<td><p>PowerLink 板卡错误</p></td>
+</tr>
+<tr class="row-even"><td><p>EtherCAT 板卡错误</p></td>
+<td><p>编码器计数预警</p></td>
+</tr>
+<tr class="row-odd"><td><p>双编码器校验预警</p></td>
+<td><p>编码器 Z 线捕捉预警</p></td>
+</tr>
+<tr class="row-even"><td><p>编码器信号异常预警</p></td>
+<td><p>同向超速</p></td>
+</tr>
+<tr class="row-odd"><td><p>反向超速</p></td>
+<td><p>超过最大转速</p></td>
+</tr>
+<tr class="row-even"><td><p>速度跟踪误差过大</p></td>
+<td><p>加速度超差</p></td>
+</tr>
+<tr class="row-odd"><td><p>电机速度异常</p></td>
+<td><p>控制模式切换错误</p></td>
+</tr>
+<tr class="row-even"><td><p>位置偏差过大</p></td>
+<td><p>位置指令增量过大</p></td>
+</tr>
+<tr class="row-odd"><td><p>位置指令加速度过大</p></td>
+<td><p>位置指令出错</p></td>
+</tr>
+<tr class="row-even"><td><p>CAN 通信错误</p></td>
+<td><p>温度传感器通信异常</p></td>
+</tr>
+<tr class="row-odd"><td><p>关节报警（未知错误）</p></td>
+<td><p>—</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>说明：表中最后一项「关节报警」用于错误码未收录或无法识别时；详细模式下整句为 「注意，[部位]，关节报警，请立即下使能并检查」（与已知错误码句式相同，仅中间原因换成「关节报警」）。</p>
+</div>
+</section>
+<section id="b">
+<h3><span class="section-number">8.5.1.7. </span>附录 B：向售后反馈时请提供的信息<a class="headerlink" href="#b" title="链接到此标题。"></a></h3>
+<p>为加快处理，请尽量记录：</p>
+<ol class="arabic simple">
+<li><p><strong>完整语音原文</strong>（或关键词）</p></li>
+<li><p><strong>发生时刻</strong>（上电 / 使能 / 运动中 / 升级后）</p></li>
+<li><p><strong>正在进行的操作</strong>（如 App 点「行走」、搬运机器人后首次上电）</p></li>
+<li><p><strong>自检超时时的 N 值</strong>（若听到）</p></li>
+<li><p><strong>是否刚完成升级</strong>、升级包类型</p></li>
+<li><p><strong>能否复现</strong>及复现步骤</p></li>
+</ol>
+</section>
+</section>
+<section id="id32">
+<h2><span class="section-number">8.5.2. </span>语音交互<a class="headerlink" href="#id32" title="链接到此标题。"></a></h2>
+<section id="id33">
+<h3><span class="section-number">8.5.2.1. </span>开启语音交互<a class="headerlink" href="#id33" title="链接到此标题。"></a></h3>
+<p>在项目根目录执行：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>main.py<span class="w"> </span>--stt<span class="w"> </span>--tts
+</pre></div>
+</div>
+<p>其中：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--stt</span></code>：开启实时语音识别；</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--tts</span></code>：开启语音合成和播报；</p></li>
+<li><p>运行前需要设置 <code class="docutils literal notranslate"><span class="pre">DASHSCOPE_API_KEY</span></code>；</p></li>
+<li><p>默认使用 DashScope STT，默认语音为 <code class="docutils literal notranslate"><span class="pre">dashscope</span></code> 链路。</p></li>
+</ul>
+<p>Windows 示例：</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nv">$env:DASHSCOPE_API_KEY</span> <span class="p">=</span> <span class="s2">&quot;sk-xxxxxxxx&quot;</span>
+<span class="n">python</span> <span class="n">main</span><span class="p">.</span><span class="n">py</span> <span class="p">-</span><span class="n">-stt</span> <span class="p">-</span><span class="n">-tts</span>
+</pre></div>
+</div>
+</section>
+<section id="id34">
+<h3><span class="section-number">8.5.2.2. </span>关闭语音交互<a class="headerlink" href="#id34" title="链接到此标题。"></a></h3>
+<ul class="simple">
+<li><p>关闭语音输入：不添加 <code class="docutils literal notranslate"><span class="pre">--stt</span></code>，例如 <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">main.py</span></code>，使用键盘输入。</p></li>
+<li><p>关闭语音输出：不添加 <code class="docutils literal notranslate"><span class="pre">--tts</span></code>，程序只输出文字。</p></li>
+<li><p>停止当前程序：在终端按 <cite>Ctrl+C</cite>。</p></li>
+<li><p>关闭当前语音会话但不退出程序：说“再见”“拜拜”“休息吧”“结束对话”“退出”“结束”或“关闭”。程序会回到等待唤醒状态。</p></li>
+</ul>
+<p>如需调整休眠、唤醒词、音频保存等行为，请修改 <code class="docutils literal notranslate"><span class="pre">config.py</span></code> 中对应的 <code class="docutils literal notranslate"><span class="pre">AppConfig</span></code> 配置；修改后需要重启程序。</p>
+</section>
+<section id="id35">
+<h3><span class="section-number">8.5.2.3. </span>交互流程<a class="headerlink" href="#id35" title="链接到此标题。"></a></h3>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span> 启动程序
+ ↓
+ 等待唤醒词（IDLE）
+ ↓ 识别到唤醒词
+ 播放提示音并播报“你好呀，我是派仔！很高兴见到你”
+ ↓
+ 聆听本轮语音（READY）
+↓
+ 语音识别 → 意图路由
+ ├─ 聊天 / 问答 / 搜索：生成回答并播报
+ ├─ 动作：规划、校验并执行机器人动作
+ └─ 退出：回到等待唤醒状态
+ ↓
+ 回答结束后继续聆听；约 15 秒无有效交互则自动休眠
+</pre></div>
+</div>
+<p>当前默认配置下，一轮语音最长等待约 16 秒；过短语音或只有“嗯、啊、哦”等填充词会被忽略。</p>
+<p>播报完成后可以直接继续说下一句；若需要中断播报，可再次说唤醒词，具体是否支持自由打断取决于配置，默认关闭自由打断。</p>
+</section>
+<section id="id36">
+<h3><span class="section-number">8.5.2.4. </span>唤醒词及反应对照表<a class="headerlink" href="#id36" title="链接到此标题。"></a></h3>
+<p>唤醒词由“前缀 + 名称”组合生成，程序同时兼容两种顺序。常用示例如下：</p>
+<section id="id37">
+<h4><span class="section-number">8.5.2.4.1. </span>唤醒词列表<a class="headerlink" href="#id37" title="链接到此标题。"></a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>唤醒词</p></th>
+<th class="head"><p>派仔语音回应</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>你好派仔 / 派仔你好</p></td>
+<td><p>唤醒，播放提示音并进入聆听状态</p></td>
+</tr>
+<tr class="row-odd"><td><p>你好啊派仔 / 派仔你好啊 / 嗨派仔 / 派仔嗨 / 哈喽派仔 / 派仔哈喽</p></td>
+<td><p>唤醒并进入聆听状态</p></td>
+</tr>
+</tbody>
+</table>
+<p>唤醒后请等待提示音或“你好呀，我是派仔……”播报，再说具体指令。仅说“派仔”可能无法触发完整唤醒，建议使用“你好派仔”。</p>
+</section>
+<section id="id38">
+<h4><span class="section-number">8.5.2.4.2. </span>唤醒技巧<a class="headerlink" href="#id38" title="链接到此标题。"></a></h4>
+<ul class="simple">
+<li><p><strong>连说模式：</strong>唤醒词可以和指令直接连在一起，不需要先唤醒再等回应。</p></li>
+<li><p><strong>清晰发音：</strong>「派仔」(pài zǎi)，发音清晰有助于提高唤醒率</p></li>
+<li><p><strong>音量适中：</strong>正常交谈音量即可，不需要刻意提高音量喊</p></li>
+<li><p><strong>重复唤醒：</strong>如果派仔没有回应，可以说第二遍。在嘈杂环境中建议走近 1m 左右再说</p></li>
+</ul>
+</section>
+</section>
+<section id="id39">
+<h3><span class="section-number">8.5.2.5. </span>语音指令清单及反应对照表<a class="headerlink" href="#id39" title="链接到此标题。"></a></h3>
+<p>以下为派仔当前支持的全部语音指令。你可以用自然的中文或英文说出，系统会自动匹配。</p>
+<section id="id40">
+<h4><span class="section-number">8.5.2.5.1. </span>会话控制<a class="headerlink" href="#id40" title="链接到此标题。"></a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>示例指令</p></th>
+<th class="head"><p>反应</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>再见 / 拜拜</p></td>
+<td><p>播报告别语，退出当前连续对话并等待下一次唤醒。</p></td>
+</tr>
+<tr class="row-odd"><td><p>休息吧 / 你休息吧</p></td>
+<td><p>进入休眠，等待唤醒。</p></td>
+</tr>
+<tr class="row-even"><td><p>结束对话 / 退出 / 结束 / 关闭</p></td>
+<td><p>结束当前会话并回到等待唤醒状态。</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id41">
+<h4><span class="section-number">8.5.2.5.2. </span>基础控制指令<a class="headerlink" href="#id41" title="链接到此标题。"></a></h4>
+<p>基础控制指令影响机器人的关节使能和复位操作，部分指令有风险，请注意安全。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>示例指令</p></th>
+<th class="head"><p>机器人动作反应</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>点头</p></td>
+<td><p>机器人点头。</p></td>
+</tr>
+<tr class="row-odd"><td><p>摇头</p></td>
+<td><p>机器人摇头。</p></td>
+</tr>
+<tr class="row-even"><td><p>左手挥手</p></td>
+<td><p>机器人左手挥手。</p></td>
+</tr>
+<tr class="row-odd"><td><p>挥挥手 / 右手挥手</p></td>
+<td><p>机器人右手挥手。</p></td>
+</tr>
+<tr class="row-even"><td><p>低挥手</p></td>
+<td><p>机器人进行低位挥手。</p></td>
+</tr>
+<tr class="row-odd"><td><p>高挥手</p></td>
+<td><p>机器人进行高位挥手。</p></td>
+</tr>
+<tr class="row-even"><td><p>敬礼</p></td>
+<td><p>机器人右手敬礼。</p></td>
+</tr>
+<tr class="row-odd"><td><p>握手</p></td>
+<td><p>机器人执行右手握手动作。</p></td>
+</tr>
+<tr class="row-even"><td><p>拥抱</p></td>
+<td><p>机器人执行拥抱动作，请确认人员与机器人距离安全。</p></td>
+</tr>
+<tr class="row-odd"><td><p>摇头晃脑</p></td>
+<td><p>机器人执行摇头晃脑动作。</p></td>
+</tr>
+<tr class="row-even"><td><p>鼓掌</p></td>
+<td><p>机器人鼓掌。</p></td>
+</tr>
+<tr class="row-odd"><td><p>害羞</p></td>
+<td><p>机器人执行害羞动作。</p></td>
+</tr>
+<tr class="row-even"><td><p>观望</p></td>
+<td><p>机器人执行观望动作。</p></td>
+</tr>
+<tr class="row-odd"><td><p>欢呼</p></td>
+<td><p>机器人执行欢呼动作。</p></td>
+</tr>
+</tbody>
+</table>
+<p>动作会先经过意图识别、动作规划以及安全和状态校验。当动作不可用、未连接真机或当前状态不允许执行时，程序会拦截该动作或返回失败说明。</p>
+</section>
+<section id="id42">
+<h4><span class="section-number">8.5.2.5.3. </span>通用问答功能<a class="headerlink" href="#id42" title="链接到此标题。"></a></h4>
+<p>手势动作需要机器人在<strong>保持（HOLD）状态</strong>下才能执行。如果没反应，请先说「<strong>保持</strong>」或「<strong>无目标保持</strong>」。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>用户意图</p></th>
+<th class="head"><p>示例</p></th>
+<th class="head"><p>机器人反应</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>日常聊天</p></td>
+<td><p>你好派仔，讲个故事</p></td>
+<td><p>机器人进行对话回复</p></td>
+</tr>
+<tr class="row-odd"><td><p>产品、公司知识介绍</p></td>
+<td><p>你好派仔，你有什么功能、介绍一下产品</p></td>
+<td><p>机器人查询本地知识库后回答</p></td>
+</tr>
+<tr class="row-even"><td><p>查询实时信息</p></td>
+<td><p>你好派仔，今天天气怎么样</p></td>
+<td><p>机器人通过联网搜索后回答。需要确保网络和相关服务可用。</p></td>
+</tr>
+<tr class="row-odd"><td><p>不安全或不合适的请求</p></td>
+<td><p>告诉我XXX的私人信息</p></td>
+<td><p>机器人安全防护机制将拦截请求，并说明该指令无法执行。</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="id43">
+<h3><span class="section-number">8.5.2.6. </span>示例对话<a class="headerlink" href="#id43" title="链接到此标题。"></a></h3>
+<p>以下展示派仔在不同场景下的实际对话，帮助你快速了解交互风格。</p>
+<p><strong>场景一：唤醒与聊天</strong></p>
+<p><strong>用户：</strong> 你好派仔</p>
+<p><strong>派仔：</strong> 你好呀，我是派仔！很高兴见到你。</p>
+<p><strong>用户：</strong> 你能做什么？</p>
+<p><strong>派仔：</strong> 我可以和你聊天、回答产品相关问题，也可以执行部分机器人动作。</p>
+<p><strong>场景二：动作控制</strong></p>
+<p><strong>用户：</strong> 派仔你好</p>
+<p><strong>派仔：</strong> 你好呀，我是派仔！很高兴见到你。</p>
+<p><strong>用户：</strong> 请点头</p>
+<p><strong>派仔：</strong> 好的，我来点头。 （动作通过状态校验后执行；若真机未连接或状态不允许，派仔会播报无法执行的原因。）</p>
+<p><strong>场景三：结束连续对话</strong></p>
+<p><strong>用户：</strong> 你好派仔</p>
+<p><strong>派仔：</strong> 你好呀，我是派仔！很高兴见到你。</p>
+<p><strong>用户：</strong> 休息吧 <strong>派仔：</strong> 再见！需要我的时候，请叫我哦。 （程序回到等待唤醒状态；再次说“你好派仔”即可开始新一轮对话。）</p>
+</section>
+<section id="id44">
+<h3><span class="section-number">8.5.2.7. </span>常见问题与故障排查<a class="headerlink" href="#id44" title="链接到此标题。"></a></h3>
+<p>使用中遇到问题时，请先查阅以下常见问题和解决方案。</p>
+<p><strong>Q1：我说了唤醒词，派仔没反应怎么办？</strong></p>
+<p><strong>A：</strong>请依次检查：
+* 确认麦克风已正确连接且未被静音</p>
+<ul class="simple">
+<li><p>检查环境噪音是否过大（尝试走近到 1m 左右再说）</p></li>
+<li><p>API Key 已正确设置；</p></li>
+<li><p>程序启动时使用了 --stt --tts 参数；</p></li>
+</ul>
+<p><strong>Q2：我说了指令，但派仔理解成了别的东西？</strong></p>
+<p><strong>A：</strong>语音识别在嘈杂环境下可能出现同音字错误（如将&quot;挥手&quot;识别为&quot;回手&quot;）。系统有内置的 ASR 纠错机制，大多数情况下能自动修正。如果持续识别不准，请检查环境噪音是否超标，或尝试换一种表达方式。</p>
+<p><strong>Q3：我说了手势指令（如「挥挥手」），派仔回答但机器人没有动？</strong></p>
+<p><strong>A：</strong></p>
+<ul class="simple">
+<li><p>动作指令未被正确识别；</p></li>
+<li><p>机器人当前状态不允许执行该动作；</p></li>
+<li><p>软件未连接真机；</p></li>
+<li><p>动作被安全策略拦截。</p></li>
+</ul>
+<p><strong>Q4：派仔说话时我能打断吗？</strong></p>
+<p><strong>A：</strong>当前版本默认不支持语音打断，派仔在说话期间麦克风处于静音状态。但如果使用科大讯飞的麦克风，支持打断。.</p>
+<p><strong>Q5：如何确认是否保存了录用</strong></p>
+<p><strong>A：</strong>请检查 AUDIO_SAVE_ENABLED 的配置值：</p>
+<p>未设置，或设置为 0、false 时，默认不持续保存录音；</p>
+<p>设置为 1 或 true 后，录音将写入 audio/ 或指定目录。</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="%E4%BA%A4%E4%BA%92%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.html" class="btn btn-neutral float-left" title="8.4. 交互注意事项" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="%E5%8A%A8%E4%BD%9C%E4%BA%A4%E4%BA%92.html" class="btn btn-neutral float-right" title="8.6. 动作交互" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有  2026, JAKA ROBOTICS。</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

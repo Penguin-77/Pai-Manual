@@ -1,0 +1,336 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>8.4. 交互注意事项 &mdash; JAKA π用户手册 V01 文档</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=25fe8c91" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=25fe8c91" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=1229c742"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/translations.js?v=540d3cec"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="8.5. 语音提示与语音交互" href="%E8%AF%AD%E9%9F%B3%E6%8F%90%E7%A4%BA%E4%B8%8E%E8%AF%AD%E9%9F%B3%E4%BA%A4%E4%BA%92.html" />
+    <link rel="prev" title="8.3. 连接机器人" href="%E8%BF%9E%E6%8E%A5%E6%9C%BA%E5%99%A8%E4%BA%BA.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            JAKA π用户手册
+              <img src="_static/Logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">目录</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E.html">1. 声明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E4%BA%A7%E5%93%81%E6%B8%85%E5%8D%95.html">2. 产品清单</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E6%89%8B%E5%86%8C%E6%A6%82%E8%BF%B0.html">3. 手册概述</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E5%AE%89%E5%85%A8%E8%A7%84%E8%8C%83.html">4. 安全规范</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0.html">5. 部件概览</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E6%8A%80%E6%9C%AF%E8%A7%84%E6%A0%BC.html">6. 技术规格</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97.html">7. 操作指南</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="%E8%BD%AF%E4%BB%B6%E5%8A%9F%E8%83%BD.html">8. 软件功能</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE%E8%A6%81%E6%B1%82.html">8.1. 系统配置要求</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%E5%AE%89%E8%A3%85%E4%B8%8E%E5%8D%87%E7%BA%A7.html">8.2. 安装与升级</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%E8%BF%9E%E6%8E%A5%E6%9C%BA%E5%99%A8%E4%BA%BA.html">8.3. 连接机器人</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">8.4. 交互注意事项</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">8.4.1. 交互场景安全</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">8.4.1.1. 安全等级说明</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">8.4.1.2. 安全操作细则</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">8.4.1.3. 使用前安全检查清单</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">8.4.2. 语音交互注意事项</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id7">8.4.2.1. 环境推荐</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">8.4.2.2. 环境与隐私注意事项</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">8.4.3. 动作交互注意事项</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id10">8.4.3.1. 动作执行前确认</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id11">8.4.3.2. 动作指令发送</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">8.4.3.3. 动作中止与恢复</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id13">8.4.3.4. 异常情况处理</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="%E8%AF%AD%E9%9F%B3%E6%8F%90%E7%A4%BA%E4%B8%8E%E8%AF%AD%E9%9F%B3%E4%BA%A4%E4%BA%92.html">8.5. 语音提示与语音交互</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%E5%8A%A8%E4%BD%9C%E4%BA%A4%E4%BA%92.html">8.6. 动作交互</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%AE%BE%E7%BD%AE.html">8.7. 机器人设置</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="%E8%B4%A8%E9%87%8F%E4%BF%9D%E9%9A%9C.html">9. 质量保证</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">JAKA π用户手册</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="%E8%BD%AF%E4%BB%B6%E5%8A%9F%E8%83%BD.html"><span class="section-number">8. </span>软件功能</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">8.4. </span>交互注意事项</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1><span class="section-number">8.4. </span>交互注意事项<a class="headerlink" href="#id1" title="链接到此标题。"></a></h1>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p>在使用机器人的各项交互功能之前，请仔细阅读本章内容。</p>
+<p>人机交互涉及实体动作与现实环境，任何操作均可能对周围人员、设备及环境产生直接影响。</p>
+<p>本章将从交互场景安全、使用环境及隐私保护等方面，列出使用过程中需要特别留意的事项，以确保交互过程安全、规范、可靠。</p>
+</div>
+<section id="id2">
+<h2><span class="section-number">8.4.1. </span>交互场景安全<a class="headerlink" href="#id2" title="链接到此标题。"></a></h2>
+<p>在进行任何交互操作前，需确保当前场景符合安全条件。机器人在响应指令时会产生实体动作，请注意以下事项以避免对人员或设备造成意外伤害。</p>
+<section id="id3">
+<h3><span class="section-number">8.4.1.1. </span>安全等级说明<a class="headerlink" href="#id3" title="链接到此标题。"></a></h3>
+<p>根据机器人动作类型，将交互场景划分为三个安全等级：</p>
+<table class="docutils align-default" id="id14">
+<caption><span class="caption-number">表 8.5 </span><span class="caption-text">安全等级说明</span><a class="headerlink" href="#id14" title="链接到此表格。"></a></caption>
+<colgroup>
+<col style="width: 17.9%" />
+<col style="width: 17.9%" />
+<col style="width: 32.1%" />
+<col style="width: 32.1%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>等级</p></th>
+<th class="head"><p>场景</p></th>
+<th class="head"><p>包含的动作</p></th>
+<th class="head"><p>风险</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>低风险</p></td>
+<td><p>手势交互</p></td>
+<td><p>挥手、点头、摇头、鼓掌、敬礼、拥抱、害羞、观望、欢呼</p></td>
+<td><p>机器人关节小幅度运动，但近距离接触时仍存在碰撞、夹伤或物品掉落风险</p></td>
+</tr>
+<tr class="row-odd"><td><p>中风险</p></td>
+<td><p>模式切换</p></td>
+<td><p>待机、保持、行走准备</p></td>
+<td><p>状态转换可能伴随姿态调整，需留意机器人周围空间</p></td>
+</tr>
+<tr class="row-even"><td><p>高风险</p></td>
+<td><p>运动控制</p></td>
+<td><p>行走模式</p></td>
+<td><p>机器人可能发生大幅位移或关节动作，必须确保安全距离</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id4">
+<h3><span class="section-number">8.4.1.2. </span>安全操作细则<a class="headerlink" href="#id4" title="链接到此标题。"></a></h3>
+<ul>
+<li><p>保持安全距离：与机器人保持至少 1m 的安全距离。运动类指令（如，行走）执行时建议扩大至 1.5m 以上。</p></li>
+<li><p>确认周围环境：发出任何可能导致机器人运动的指令前，请环顾四周确认无其他人员靠近机器人工作半径。</p></li>
+<li><p>故障状态处理：机器人报告故障时，请立即停止发送动作指令，并根据软件提示确认故障类型。仅在确认现场安全且该故障允许复位的情况下，按照规定执行复位操作。</p>
+<p>若故障原因不明、反复复位失败或机器人出现非预期运动、异响、冒烟等情况，请立即急停、切断电源并联系技术人员。</p>
+</li>
+<li><p>儿童与参观者：未成年人或无培训经历的参观者应在工作人员陪同下操作，不得单独操作。</p></li>
+<li><p>语音确认机制：涉及高风险动作时，派仔会先口头确认再执行。听到确认后请确保安全再回复“好的”确认执行。</p></li>
+</ul>
+</section>
+<section id="id5">
+<h3><span class="section-number">8.4.1.3. </span>使用前安全检查清单<a class="headerlink" href="#id5" title="链接到此标题。"></a></h3>
+<ul class="simple">
+<li><p>视觉检查：机器人外观无损坏，电缆无裸露，关节无异物卡入。</p></li>
+<li><p>空间检查：机器人周围至少 1.5m 范围内无人、无杂物及易碎物品。对于仅涉及头部或手部小幅运动的动作，可根据机器人实际运动范围设置安全区域；对于行走、转身等运动类动作，应预留更大的安全空间。</p></li>
+<li><p>状态检查：确认机器人当前处于待机（IDLE）状态，非故障状态。</p></li>
+<li><p>听觉检查：环境噪音适中，可清晰听到机器人的语音反馈。</p></li>
+<li><p>权限确认：确认自己有操作权限。</p></li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">危险</p>
+<p>机器人报告故障时，请立即停止发送动作指令，并根据软件提示确认故障类型。
+切勿在故障状态下尝试复位。</p>
+</div>
+</section>
+</section>
+<section id="id6">
+<h2><span class="section-number">8.4.2. </span>语音交互注意事项<a class="headerlink" href="#id6" title="链接到此标题。"></a></h2>
+<p>语音交互依赖麦克风收音和云端处理，用户需要关注使用环境和数据隐私。</p>
+<section id="id7">
+<h3><span class="section-number">8.4.2.1. </span>环境推荐<a class="headerlink" href="#id7" title="链接到此标题。"></a></h3>
+<table class="docutils align-default" id="id15">
+<caption><span class="caption-number">表 8.6 </span><span class="caption-text">环境推荐</span><a class="headerlink" href="#id15" title="链接到此表格。"></a></caption>
+<colgroup>
+<col style="width: 26.3%" />
+<col style="width: 26.3%" />
+<col style="width: 47.4%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>条件</p></th>
+<th class="head"><p>推荐值</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>背景噪音</p></td>
+<td><p>&lt; 60dB</p></td>
+<td><p>办公室级别安静环境；嘈杂厂房可能导致识别率下降</p></td>
+</tr>
+<tr class="row-odd"><td><p>说话距离</p></td>
+<td><p>1m ~ 3m</p></td>
+<td><p>太近（&lt; 0.5m）可能破音，太远（&gt; 5m）拾音衰减明显</p></td>
+</tr>
+<tr class="row-even"><td><p>语速</p></td>
+<td><p>正常语速</p></td>
+<td><p>约 3~5 字/秒，无需刻意放慢；过快可能漏字</p></td>
+</tr>
+<tr class="row-odd"><td><p>多人同时说话</p></td>
+<td><p>避免</p></td>
+<td><p>多人同时说话会严重干扰识别，建议轮流发言</p></td>
+</tr>
+<tr class="row-even"><td><p>回声/混响</p></td>
+<td><p>避免</p></td>
+<td><p>空旷大厅、玻璃墙面多的空间回声较大，建议在常规室内使用</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>如果在嘈杂环境中识别不准，可以走近一些（1m 左右），稍微提高音量但不要喊，语速放慢一点效果更好。</p>
+</div>
+</section>
+<section id="id8">
+<h3><span class="section-number">8.4.2.2. </span>环境与隐私注意事项<a class="headerlink" href="#id8" title="链接到此标题。"></a></h3>
+<ul class="simple">
+<li><p>请将麦克风放置在稳定、无遮挡的位置，尽量远离扬声器、强噪声源和风口。</p></li>
+<li><p>建议在安静环境中说话，使用普通话、完整短句，并与麦克风保持适当距离。</p></li>
+<li><p>语音识别会受噪声、回声、多人同时说话和方言影响；识别错误时请重说，不要根据错误识别结果操作机器人。</p></li>
+<li><p>运行语音模式时，麦克风会持续监听唤醒词；唤醒后才会采集本轮语音并提交识别。</p></li>
+<li><p>默认不持续保存音频。只有设置 AUDIO_SAVE_ENABLED=1 时，程序才会将调试音频保存到 audio/（或 AUDIO_SAVE_DIR 指定目录）。</p></li>
+<li><p>不要在公开场所说出密码、Token、身份证号、联系方式等敏感信息，也不要让旁人录入不应收集的个人信息。</p></li>
+<li><p>使用联网问答、知识库或大模型功能时，输入内容可能发送至相应服务；部署前请按现场隐私要求配置和告知用户。</p></li>
+</ul>
+</section>
+</section>
+<section id="id9">
+<h2><span class="section-number">8.4.3. </span>动作交互注意事项<a class="headerlink" href="#id9" title="链接到此标题。"></a></h2>
+<p>机器人可通过软件界面中的动作指令执行点头、摇头、挥手、行走等动作。由于机器人从接收指令到完成动作需要一定时间，操作过程中应关注机器人的实际状态，避免重复操作、指令冲突或外力干预。</p>
+<section id="id10">
+<h3><span class="section-number">8.4.3.1. </span>动作执行前确认<a class="headerlink" href="#id10" title="链接到此标题。"></a></h3>
+<ul class="simple">
+<li><p>机器人已正常启动并与软件保持连接，当前未处于故障、急停、升级或其他不可操作状态。</p></li>
+<li><p>机器人周围具有足够的活动空间，身体、头部、手臂及其他可动部件的运动范围内无人员、障碍物或易碎物品。</p></li>
+<li><p>机器人放置或站立在平整、稳固的地面上，不得在倾斜、湿滑、松软或存在明显振动的地面上执行动作。</p></li>
+<li><p>当前动作不会与机器人正在执行的导航、充电、遥控、模仿或其他任务发生冲突。</p></li>
+<li><p>通过软件操作时，确认当前选中的机器人设备正确，避免将动作指令误发送至其他在线机器人。</p></li>
+</ul>
+</section>
+<section id="id11">
+<h3><span class="section-number">8.4.3.2. </span>动作指令发送<a class="headerlink" href="#id11" title="链接到此标题。"></a></h3>
+<ul class="simple">
+<li><p>单次发送：点击动作按钮后，请等待机器人完成当前动作，避免连续点击按钮。</p></li>
+<li><p>保留响应时间：机器人从识别指令到开始执行可能存在短暂延迟。未确认指令执行失败前，请勿立即重复发送。</p></li>
+<li><p>避免冲突指令：机器人执行动作期间，请勿同时通过语音和软件发送不同或相反的动作指令。</p></li>
+<li><p>避免多人同时控制：同一时间应由一名操作人员控制机器人。</p></li>
+<li><p>谨慎使用连续动作：连续执行多个动作时，应在前一个动作结束后再发送下一个动作，并在动作之间保留适当间隔。</p></li>
+</ul>
+</section>
+<section id="id12">
+<h3><span class="section-number">8.4.3.3. </span>动作中止与恢复<a class="headerlink" href="#id12" title="链接到此标题。"></a></h3>
+<p>如需提前停止机器人动作，应优先使用手柄或软件上的“中止”或“急停”功能。</p>
+<p>停止动作后，请确认机器人已经完全静止，再靠近机器人或进行后续操作。</p>
+<p>机器人触发急停后，未经安全检查不得直接恢复使能。恢复前应确认：</p>
+<ul class="simple">
+<li><p>导致急停的人员、障碍物或异常因素已经排除。</p></li>
+<li><p>机器人本体及关节无明显损坏、卡滞或异物。</p></li>
+<li><p>机器人周围人员已撤离至安全距离之外。</p></li>
+<li><p>当前机器人姿态适合恢复使能。</p></li>
+<li><p>已按照规定完成急停解除和复位操作。</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>急停、关闭使能和复位可能导致机器人失去关节保持力、停止当前任务或重新调整姿态。</p>
+<p>执行此类操作前，应防止机器人倾倒、部件下落或与周围物体发生碰撞。</p>
+</div>
+</section>
+<section id="id13">
+<h3><span class="section-number">8.4.3.4. </span>异常情况处理<a class="headerlink" href="#id13" title="链接到此标题。"></a></h3>
+<p>机器人出现以下情况时，应立即停止发送动作指令：</p>
+<ul class="simple">
+<li><p>动作明显卡顿、抖动或无法完成；</p></li>
+<li><p>实际执行动作与下发指令不一致；</p></li>
+<li><p>关节或其他部件被障碍物卡住；</p></li>
+<li><p>软件持续提示动作执行失败、通信异常或设备忙碌；</p></li>
+<li><p>机器人发生倾斜、失去平衡或倾倒；</p></li>
+<li><p>机器人出现异常声音、异常发热、异味、冒烟或部件脱落；</p></li>
+<li><p>机器人在未接收到有效指令的情况下发生非预期运动。</p></li>
+</ul>
+<p>发生异常后，请勿通过连续点击动作按钮或强行扳动关节的方式尝试恢复机器人。应根据异常程度执行停止、急停或断电操作，并联系技术人员进行处理。</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="%E8%BF%9E%E6%8E%A5%E6%9C%BA%E5%99%A8%E4%BA%BA.html" class="btn btn-neutral float-left" title="8.3. 连接机器人" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="%E8%AF%AD%E9%9F%B3%E6%8F%90%E7%A4%BA%E4%B8%8E%E8%AF%AD%E9%9F%B3%E4%BA%A4%E4%BA%92.html" class="btn btn-neutral float-right" title="8.5. 语音提示与语音交互" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有  2026, JAKA ROBOTICS。</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

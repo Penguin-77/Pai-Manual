@@ -7,7 +7,7 @@
 |product_name| 分为三个版本：基础版、探索版和旗舰版。
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 6
    :caption: 目录
    :numbered:
 
@@ -19,5 +19,5 @@
    系统概述.rst
    技术规格.rst
    操作指南.rst
+   软件功能.rst
    质量保障.rst
-
