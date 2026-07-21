@@ -1281,14 +1281,16 @@
 </tbody>
 </table>
 <p>唤醒后请等待提示音或“你好呀，我是派仔……”播报，再说具体指令。仅说“派仔”可能无法触发完整唤醒，建议使用“你好派仔”。</p>
+<p>唤醒词当前还兼容“拍仔、潘仔、胖子、胖仔、派崽、孩子、派子、华子、坏子、坏仔、太子、太仔”等“派仔”识别变体，以及特殊唤醒短语“你好发一张”。</p>
+<p>唤醒词、欢迎语及识别参数均可在 config.py 调整。</p>
 </section>
 <section id="id38">
 <h4><span class="section-number">8.5.2.4.2. </span>唤醒技巧<a class="headerlink" href="#id38" title="链接到此标题。"></a></h4>
 <ul class="simple">
-<li><p><strong>连说模式：</strong>唤醒词可以和指令直接连在一起，不需要先唤醒再等回应。</p></li>
-<li><p><strong>清晰发音：</strong>「派仔」(pài zǎi)，发音清晰有助于提高唤醒率</p></li>
-<li><p><strong>音量适中：</strong>正常交谈音量即可，不需要刻意提高音量喊</p></li>
-<li><p><strong>重复唤醒：</strong>如果派仔没有回应，可以说第二遍。在嘈杂环境中建议走近 1m 左右再说</p></li>
+<li><p><strong>指令模式：</strong>唤醒后请等待提示音或“你好呀，我是派仔……”播报，再说具体指令。</p></li>
+<li><p><strong>清晰发音：</strong>「派仔」(pài zǎi)，发音清晰有助于提高唤醒率。</p></li>
+<li><p><strong>音量适中：</strong>正常交谈音量即可，不需要刻意提高音量喊。</p></li>
+<li><p><strong>重复唤醒：</strong>如果派仔没有回应，可以说第二遍。在嘈杂环境中建议走近 1m 左右再说。</p></li>
 </ul>
 </section>
 </section>
@@ -1382,7 +1384,6 @@
 </section>
 <section id="id42">
 <h4><span class="section-number">8.5.2.5.3. </span>通用问答功能<a class="headerlink" href="#id42" title="链接到此标题。"></a></h4>
-<p>手势动作需要机器人在<strong>保持（HOLD）状态</strong>下才能执行。如果没反应，请先说「<strong>保持</strong>」或「<strong>无目标保持</strong>」。</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 33.3%" />
@@ -1456,7 +1457,7 @@
 <li><p>动作被安全策略拦截。</p></li>
 </ul>
 <p><strong>Q4：派仔说话时我能打断吗？</strong></p>
-<p><strong>A：</strong>当前版本默认不支持语音打断，派仔在说话期间麦克风处于静音状态。但如果使用科大讯飞的麦克风，支持打断。.</p>
+<p><strong>A：</strong>语音打断由当前配置决定，默认关闭自由打断；播放期间会启用回声保护。</p>
 <p><strong>Q5：如何确认是否保存了录用</strong></p>
 <p><strong>A：</strong>请检查 AUDIO_SAVE_ENABLED 的配置值：</p>
 <p>未设置，或设置为 0、false 时，默认不持续保存录音；</p>

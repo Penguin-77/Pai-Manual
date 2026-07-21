@@ -92,25 +92,31 @@
 
        .. figure:: ./images/打开背面电池仓门.*
          :align: center
-         :width: 8cm
+         :width: 7cm
 
     - 将电池插入机器人背部的电池仓，推至底部时听到“咔哒”声，表示电池已锁定到位。安装成功后，请再次按压电池表面，确认电池完全插入且卡扣已复位。
 
        .. figure:: ./images/安装电池.*
          :align: center
-         :width: 8cm
+         :width: 7cm
 
     - 旋转固定运输箱背面的卡扣，关闭包装箱上的电池仓门。
 
        .. figure:: ./images/关闭背面电池仓门.*
          :align: center
-         :width: 8cm
+         :width: 7cm
 
 #. **拆开包装并取出机器人**
 
-    - 旋转固定运输箱顶盖和前盖的四个卡扣，打开顶盖和前盖。
+    - 旋转固定运输箱顶盖的四个卡扣，取下顶盖。
 
-       .. figure:: ./images/打开顶盖侧盖.*
+       .. figure:: ./images/取下顶盖.*
+         :align: center
+         :width: 7cm
+
+    - 旋转固定运输箱前盖的两个卡扣，打开前盖。
+
+       .. figure:: ./images/打开前盖.*
          :align: center
          :width: 10cm
 
@@ -131,7 +137,7 @@
 
        .. figure:: ./images/机器人吊至站立姿态.*
          :align: center
-         :width: 9cm
+         :width: 8cm
 
     - 移走包装箱。
 
@@ -172,8 +178,6 @@
        .. figure:: ./images/机器人站立吊起.*
          :align: center
          :width: 7cm
-
-
 
 .. _充换电流程:
 
@@ -234,9 +238,13 @@
    - 将充电器的三芯插头插入市电插座。
    - 将电源线的端子端连接至电池背面的充电接口。
 
-     .. figure:: ./images/快充接口位置.*
+     .. figure:: ./images/快充插接.*
        :align: center
-       :width: 6cm
+       :width: 5cm
+
+.. attention::
+
+   电源线连接至快充接口时，应与接口保持垂直。
 
 **2. 慢充：**
 
@@ -317,6 +325,6 @@
 
 .. figure:: ./images/控制流程.*
  :align: center
- :width: 18cm
+ :width: 14cm
 
  模式切换流程
